@@ -1,3 +1,8 @@
 #Successful Tests
-#Sun Nov 19 21:42:21 CET 2023
+#Mon Nov 20 10:58:39 CET 2023
+filtersTest.RotateTest=1700474318282
+filtersTest.TestFlip=1700474318917
+filtersTest.FiltersTest=1700474318862
+filtersTest.GreyscaleTest=1700474319005
+filtersTest.InvertTest=1700474318890
 SaturationTest=1700426541707

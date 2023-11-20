@@ -4,5 +4,10 @@
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SaturationTest.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	SaturationTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TestFlip.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InvertTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GreyscaleTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FiltersTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RotateTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FilterUtils.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/test-classes.bak[0m

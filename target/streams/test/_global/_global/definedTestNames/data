@@ -1,1 +1,1 @@
-["SaturationTest"]
+["filtersTest.RotateTest","filtersTest.GreyscaleTest","filtersTest.TestFlip","filtersTest.FiltersTest","filtersTest.InvertTest"]

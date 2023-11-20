@@ -1,14 +1,13 @@
-package saturation
-import core.{Frame, Image}
+package filters
+import core.Image
 
 import java.awt.Color
 import java.awt.image.BufferedImage
 
-class GreyscaleSaturation extends Saturation {
-
-  override def saturate(originalImage: Image): Image = {
-    val width : Int = originalImage.frame.width
-    val height : Int = originalImage.frame.height
+class Greyscale extends Filter {
+  override def apply(originalImage: Image): Image = {
+    val width: Int = originalImage.frame.width
+    val height: Int = originalImage.frame.height
     val greyscaleImage = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY)
 
     for (y <- 0 until height) {
