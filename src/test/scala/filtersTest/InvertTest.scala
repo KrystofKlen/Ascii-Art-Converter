@@ -2,9 +2,10 @@ package filtersTest
 
 import filters.Invert
 import org.scalatest.funsuite.AnyFunSuite
+import testUtils.TestUtils
 
 class InvertTest extends AnyFunSuite{
-  val utils = new FilterUtils
+  val utils = new TestUtils
 
   test("Image is inverted"){
     val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")

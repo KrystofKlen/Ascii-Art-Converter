@@ -34,7 +34,7 @@ class Invert extends Filter {
       }
     }
 
-    Image(invertedImage)
+    new Image(invertedImage)
   }
 }
 

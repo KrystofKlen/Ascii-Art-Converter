@@ -5,10 +5,11 @@ import filters.Brightness
 import org.scalatest.funsuite.AnyFunSuite
 import java.io.File
 import javax.imageio.ImageIO
+import testUtils.TestUtils
 
 class FiltersTest extends AnyFunSuite {
 
-  val utils = new FilterUtils
+  val utils = new TestUtils
 
   test("Brightness test.") {
     val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")

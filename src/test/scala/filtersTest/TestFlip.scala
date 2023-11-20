@@ -4,6 +4,7 @@ import core.Image
 import filters.FLIP_AXIS._
 import filters.Flip
 import org.scalatest.funsuite.AnyFunSuite
+import testUtils.TestUtils
 
 import java.awt.image.BufferedImage
 import java.io.File
@@ -11,7 +12,7 @@ import javax.imageio.ImageIO
 
 class TestFlip extends AnyFunSuite{
 
-  val utils = new FilterUtils
+  val utils = new TestUtils
 
   test("Y flip"){
     val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")

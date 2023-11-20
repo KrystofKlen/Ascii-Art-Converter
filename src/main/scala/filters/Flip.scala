@@ -22,6 +22,6 @@ class Flip(axis: FLIP_AXIS) extends Filter {
     val op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
     val flipped = new BufferedImage(width, height, originalImage.bufferedImage.getType)
     op.filter(originalImage.bufferedImage, flipped)
-    Image(flipped)
+    new Image(flipped)
   }
 }

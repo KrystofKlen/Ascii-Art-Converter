@@ -1,0 +1,35 @@
+package asciiConvertion
+import core.{AsciiImage, AsciiTable, Image}
+
+class LinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
+  override def convert(image: Image): AsciiImage = {
+    val width = image.frame.width
+    val height = image.frame.height
+    val asciiChars = Array.ofDim[Char](width, height)
+
+    for (x <- 0 until width) {
+      for (y <- 0 until height) {
+        val rgb = image.bufferedImage.getRGB(x, y)
+        val charIndex = mapRgbToAsciiIndex(rgb)
+        asciiChars(x)(y) = asciiTable.chars(charIndex)
+      }
+    }
+
+    new AsciiImage(asciiChars)
+  }
+
+  private def mapRgbToAsciiIndex(rgb: Int): Int = {
+    // Extracting individual color components (assuming RGB)
+    val red = (rgb >> 16) & 0xFF
+    val green = (rgb >> 8) & 0xFF
+    val blue = rgb & 0xFF
+
+    // Convert RGB to grayscale (assuming linear weights)
+    val gray = (0.299 * red + 0.587 * green + 0.114 * blue).toInt
+
+    // Map the grayscale value to an index in the ASCII table
+    // Adjust the range based on the ASCII table length
+    val asciiTableLength = asciiTable.chars.length
+    ((gray.toDouble / 255) * (asciiTableLength - 1)).toInt
+  }
+}

@@ -2,7 +2,7 @@ package core
 
 import java.awt.image.BufferedImage
 
-case class Image(val bufferedImage: BufferedImage){
+class Image(val bufferedImage: BufferedImage){
   val frame: Frame = Frame(bufferedImage.getWidth, bufferedImage.getHeight)
 
   override def equals(obj: Any): Boolean = {
@@ -13,7 +13,7 @@ case class Image(val bufferedImage: BufferedImage){
     }
   }
 
-  def samePixels(image: Image):Boolean = {
+  private def samePixels(image: Image):Boolean = {
     val width = image.frame.width
     val height = image.frame.height
     for (x <- 0 until width) {

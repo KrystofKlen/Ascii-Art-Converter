@@ -12,7 +12,7 @@ class RotateTest extends AnyFunSuite{
     val imagePath = "src/test/assets/sunflower.jpg" // Replace with the actual path to your image
 
     // Load the image using ImageIO
-    val originalImage = Image(ImageIO.read(new java.io.File(imagePath)))
+    val originalImage = new Image(ImageIO.read(new java.io.File(imagePath)))
 
     // Apply Greyscale Saturation
     val filter = new Rotate(90)

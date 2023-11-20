@@ -1,15 +1,15 @@
-package filtersTest
+package testUtils
 
 import core.Image
 
 import java.io.File
 import javax.imageio.ImageIO
 
-class FilterUtils {
+class TestUtils {
   def loadImg(src: String): Image = {
     val imagePath = src
     // Load the image using ImageIO
-    Image(ImageIO.read(new java.io.File(imagePath)))
+    new Image(ImageIO.read(new java.io.File(imagePath)))
   }
 
   def saveToFile(filtered: Image): Unit = {

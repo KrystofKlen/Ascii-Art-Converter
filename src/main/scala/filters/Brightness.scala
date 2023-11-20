@@ -36,7 +36,7 @@ class Brightness(val brightness: Int) extends Filter {
       }
     }
 
-    Image(brightenedImage)
+    new Image(brightenedImage)
 
   }
 

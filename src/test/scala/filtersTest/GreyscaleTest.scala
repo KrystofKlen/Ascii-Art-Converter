@@ -2,9 +2,10 @@ package filtersTest
 
 import filters.Greyscale
 import org.scalatest.funsuite.AnyFunSuite
+import testUtils.TestUtils
 
 class GreyscaleTest extends AnyFunSuite{
-  val utils = new FilterUtils
+  val utils = new TestUtils
 
   test("Greyscale Saturation test.") {
     val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")

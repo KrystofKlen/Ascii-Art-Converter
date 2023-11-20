@@ -30,6 +30,6 @@ class Greyscale extends Filter {
       }
     }
 
-    Image(greyscaleImage)
+    new Image(greyscaleImage)
   }
 }
