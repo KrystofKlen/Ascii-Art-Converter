@@ -7,8 +7,8 @@ import java.awt.image.{AffineTransformOp, BufferedImage}
 
 class Flip(axis: FLIP_AXIS) extends Filter {
   override def apply(originalImage: Image): Image = {
-    val width = originalImage.frame.width
-    val height = originalImage.frame.height
+    val width = originalImage.getWidth
+    val height = originalImage.getHeight
 
     val tx = new AffineTransform()
     if (axis == Y) {
@@ -20,8 +20,8 @@ class Flip(axis: FLIP_AXIS) extends Filter {
     }
 
     val op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
-    val flipped = new BufferedImage(width, height, originalImage.bufferedImage.getType)
-    op.filter(originalImage.bufferedImage, flipped)
+    val flipped = new BufferedImage(width, height, originalImage.getType)
+    op.filter(originalImage.getBufferedImage, flipped)
     new Image(flipped)
   }
 }

@@ -1,5 +1,7 @@
 package commands
 
-class InvertCmd extends Command {
-  override def executeCommand(): Unit = ???
+import core.Image
+
+class InvertCmd extends Command[Image] {
+  override def executeCommand(): Image = null
 }

@@ -11,7 +11,7 @@ class ImageFileOutputWriter(filePath: String, imageFormat: String) extends Outpu
       val writer = ImageIO.getImageWritersByFormatName(imageFormat).next()
       val output = new File(filePath)
       writer.setOutput(ImageIO.createImageOutputStream(output))
-      writer.write(data.bufferedImage)
+      writer.write(data.getBufferedImage)
       // Close all streams
       writer.dispose()
       true

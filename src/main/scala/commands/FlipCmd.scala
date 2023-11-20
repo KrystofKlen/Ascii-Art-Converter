@@ -1,5 +1,9 @@
 package commands
 
-class FlipCmd extends Command {
-  override def executeCommand(): Unit = ???
+import core.Image
+
+class FlipCmd extends Command[Image] {
+  override def executeCommand(): Image = {
+    return null
+  }
 }

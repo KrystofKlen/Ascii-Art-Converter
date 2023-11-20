@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage
 
 class Greyscale extends Filter {
   override def apply(originalImage: Image): Image = {
-    val width: Int = originalImage.frame.width
-    val height: Int = originalImage.frame.height
+    val width: Int = originalImage.getWidth
+    val height: Int = originalImage.getHeight
     val greyscaleImage = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY)
 
     for (y <- 0 until height) {
       for (x <- 0 until width) {
-        val rgb = originalImage.bufferedImage.getRGB(x, y)
+        val rgb = originalImage.getRGB(x, y)
 
         // Extract the red, green, and blue components
         val red = (rgb >> 16) & 0xFF

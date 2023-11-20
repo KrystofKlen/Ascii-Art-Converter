@@ -23,7 +23,7 @@ class RotateTest extends AnyFunSuite{
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()
     val output = new File("src/test/assets/sunflower_grey.jpg")
     writer.setOutput(ImageIO.createImageOutputStream(output))
-    writer.write(filtered4.bufferedImage)
+    writer.write(filtered4.getBufferedImage)
 
   }
 

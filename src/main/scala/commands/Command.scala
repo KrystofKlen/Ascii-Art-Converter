@@ -1,5 +1,5 @@
 package commands
 
-trait Command {
-  def executeCommand()
+trait Command[T] {
+  def executeCommand():T
 }

@@ -22,7 +22,6 @@ class OutputFileTest extends AnyFunSuite{
     val result = loader.load()
     if (result.isEmpty) fail("could not load")
 
-
     val output: OutputWriter[AsciiImage] = new AsciiFileOutputWriter("src/test/assets/test_output_2");
     val converter: AsciiConverter = new LinearConverter(
       AsciiTable(Array('$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']',

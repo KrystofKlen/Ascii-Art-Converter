@@ -1,36 +1,18 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.LinearConverterTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.GreyscaleTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.RotateTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.FiltersTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mLinearConverterTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ascii linear[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.NonLinearConverterTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.TestFlip, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.InvertTest, org.scalatest.tools.Framework$$anon$1@2cea137f, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRotateTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rotation test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mFiltersTest:[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.TestFlip, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.GreyscaleTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.BrightnessTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(outputTests.OutputConsoleTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.InvertTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mOutputConsoleTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33m- Ascii output console !!! IGNORED !!![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBrightnessTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Brightness test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mNonLinearConverterTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ascii non-linear[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.RotateTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInvertTest:[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.NonLinearConverterTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Image is inverted[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mGreyscaleTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Greyscale Saturation test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInvertTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Image is inverted[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mTestFlip:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Y flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- X flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Double flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 178 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 9[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 7, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 9, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.RotateTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.GreyscaleTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AsciiConertionTest.LinearConverterTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.TestFlip[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.FiltersTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AsciiConertionTest.NonLinearConverterTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.InvertTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.LinearConverterTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(loaderTests.ImageFileLoaderTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(outputTests.OutputFileTest, org.scalatest.tools.Framework$$anon$1@735d7f1e, false, [SuiteSelector])[0m

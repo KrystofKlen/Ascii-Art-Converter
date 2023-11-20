@@ -7,7 +7,7 @@ import java.io.File
 import javax.imageio.ImageIO
 import testUtils.TestUtils
 
-class FiltersTest extends AnyFunSuite {
+class BrightnessTest extends AnyFunSuite {
 
   val utils = new TestUtils
 
@@ -20,6 +20,6 @@ class FiltersTest extends AnyFunSuite {
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()
     val output = new File("src/test/assets/sunflower_grey.jpg")
     writer.setOutput(ImageIO.createImageOutputStream(output))
-    writer.write(filtered.bufferedImage)
+    writer.write(filtered.getBufferedImage)
   }
 }

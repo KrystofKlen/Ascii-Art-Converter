@@ -16,6 +16,6 @@ class TestUtils {
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()
     val output = new File("src/test/assets/test_result.jpg")
     writer.setOutput(ImageIO.createImageOutputStream(output))
-    writer.write(filtered.bufferedImage)
+    writer.write(filtered.getBufferedImage)
   }
 }

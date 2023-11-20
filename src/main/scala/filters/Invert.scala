@@ -6,14 +6,14 @@ import java.awt.image.BufferedImage
 
 class Invert extends Filter {
   override def apply(originalImage: Image): Image = {
-    val width = originalImage.frame.width
-    val height = originalImage.frame.height
+    val width = originalImage.getWidth
+    val height = originalImage.getHeight
 
-    val invertedImage = new BufferedImage(width, height, originalImage.bufferedImage.getType)
+    val invertedImage = new BufferedImage(width, height, originalImage.getType)
 
     for (y <- 0 until height) {
       for (x <- 0 until width) {
-        val rgb: Int = originalImage.bufferedImage.getRGB(x, y)
+        val rgb: Int = originalImage.getRGB(x, y)
 
         // Extract individual color components
         val alpha: Int = (rgb >> 24) & 0xFF

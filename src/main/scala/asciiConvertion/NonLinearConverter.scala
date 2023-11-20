@@ -3,13 +3,13 @@ import core.{AsciiImage, AsciiTable, Image}
 
 class NonLinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
   override def convert(image: Image): AsciiImage = {
-    val width = image.frame.width
-    val height = image.frame.height
+    val width = image.getWidth
+    val height = image.getHeight
     val asciiChars = Array.ofDim[Char](width, height)
 
     for (x <- 0 until width) {
       for (y <- 0 until height) {
-        val rgb = image.bufferedImage.getRGB(x, y)
+        val rgb = image.getRGB(x, y)
         val charIndex = mapRgbToAsciiIndex(rgb)
         asciiChars(x)(y) = asciiTable.chars(charIndex)
       }

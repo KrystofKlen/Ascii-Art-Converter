@@ -20,12 +20,12 @@ class TestFlip extends AnyFunSuite{
     val filter = new Flip(Y)
     val filtered1 = filter.apply(originalImage);
 
-    val width = filtered1.frame.width
-    val height = filtered1.frame.height
+    val width = filtered1.getWidth
+    val height = filtered1.getHeight
     for(x <- 0 until width){
       for(y <- 0 until height){
-        if(originalImage.bufferedImage.getRGB(x,y)
-          != filtered1.bufferedImage.getRGB(width-x-1,y)) fail("FLIP Y NOT OK")
+        if(originalImage.getRGB(x,y)
+          != filtered1.getRGB(width-x-1,y)) fail("FLIP Y NOT OK")
       }
     }
   }
@@ -36,12 +36,12 @@ class TestFlip extends AnyFunSuite{
     val filter = new Flip(X)
     val filtered1 = filter.apply(originalImage);
 
-    val width = filtered1.frame.width
-    val height = filtered1.frame.height
+    val width = filtered1.getWidth
+    val height = filtered1.getHeight
     for (y <- 0 until height) {
       for (x <- 0 until width) {
-        if (originalImage.bufferedImage.getRGB(x, y)
-          != filtered1.bufferedImage.getRGB(x, height - y - 1)) fail("FLIP X NOT OK")
+        if (originalImage.getRGB(x, y)
+          != filtered1.getRGB(x, height - y - 1)) fail("FLIP X NOT OK")
       }
     }
   }

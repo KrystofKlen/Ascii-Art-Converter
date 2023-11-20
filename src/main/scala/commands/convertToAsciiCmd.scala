@@ -1,5 +1,7 @@
 package commands
 
-class convertToAsciiCmd extends Command {
-  override def executeCommand(): Unit = ???
+import core.AsciiImage
+
+class convertToAsciiCmd extends Command[AsciiImage] {
+  override def executeCommand(): AsciiImage = null
 }

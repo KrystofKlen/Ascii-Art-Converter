@@ -14,9 +14,9 @@ class GreyscaleTest extends AnyFunSuite{
     val filtered = filter.apply(originalImage)
 
     // Assert that all pixels in the saturated image are greyscale
-    for (y <- 0 until filtered.frame.height) {
-      for (x <- 0 until filtered.frame.width) {
-        val pixel = filtered.bufferedImage.getRGB(x, y)
+    for (y <- 0 until filtered.getHeight) {
+      for (x <- 0 until filtered.getWidth) {
+        val pixel = filtered.getRGB(x, y)
 
         // Extract red, green, and blue components
         val red = (pixel >> 16) & 0xFF

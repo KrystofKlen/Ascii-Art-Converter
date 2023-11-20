@@ -7,12 +7,12 @@ class Brightness(val brightness: Int) extends Filter {
 
   override def apply(originalImage: Image): Image = {
     val brightenedImage = new BufferedImage(
-      originalImage.frame.width, originalImage.frame.height, originalImage.bufferedImage.getType
+      originalImage.getWidth, originalImage.getHeight, originalImage.getType
     )
     val brightnessAdjusted = adjustBrightness(brightness)
-    for (y <- 0 until originalImage.frame.height) {
-      for (x <- 0 until originalImage.frame.width) {
-        val rgb: Int = originalImage.bufferedImage.getRGB(x, y)
+    for (y <- 0 until originalImage.getHeight) {
+      for (x <- 0 until originalImage.getWidth) {
+        val rgb: Int = originalImage.getRGB(x, y)
 
         val alpha: Int = (rgb >> 24) & 0xFF
         var red: Int = (rgb >> 16) & 0xFF
