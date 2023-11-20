@@ -1,10 +1,14 @@
 #Successful Tests
-#Mon Nov 20 15:58:50 CET 2023
-filtersTest.RotateTest=1700492330466
-filtersTest.TestFlip=1700492330968
-AsciiConertionTest.NonLinearConverterTest=1700492330294
-filtersTest.FiltersTest=1700492330599
-AsciiConertionTest.LinearConverterTest=1700492330202
-filtersTest.GreyscaleTest=1700492330838
-filtersTest.InvertTest=1700492330915
+#Mon Nov 20 22:09:35 CET 2023
+filtersTest.TestFlip=1700514575844
+filtersTest.RotateTest=1700514574846
+AsciiConertionTest.NonLinearConverterTest=1700514573244
+outputTests.OutputConsoleTest=1700514573248
+AsciiConertionTest.LinearConverterTest=1700514574529
 SaturationTest=1700426541707
+filtersTest.BrightnessTest=1700514574435
+filtersTest.FiltersTest=1700492330599
+loaderTests.ImageFileLoaderTest=1700514573221
+outputTests.OutputFileTest=1700514573398
+filtersTest.GreyscaleTest=1700514574942
+filtersTest.InvertTest=1700514574863

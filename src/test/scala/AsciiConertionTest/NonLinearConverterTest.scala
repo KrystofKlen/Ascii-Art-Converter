@@ -19,9 +19,9 @@ class NonLinearConverterTest extends AnyFunSuite{
     val result = converter.convert(img)
     try {
       val writer = new BufferedWriter(new FileWriter("src/test/assets/test_ascii"))
-      for (y <- 0 until result.frame.height) {
-        for (x <- 0 until result.frame.width) {
-          writer.write(result.chars(x)(y))
+      for (y <- 0 until result.getHeight) {
+        for (x <- 0 until result.getWidth) {
+          writer.write(result.getCharAt(x,y).get)
         }
         writer.newLine() // Move to the next line after writing each row
       }

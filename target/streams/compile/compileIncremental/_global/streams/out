@@ -1,33 +1,74 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 26 products, 19 sources, 1 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 37 products, 30 sources, 1 libraries[0m
 [0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/filters/FLIP_AXIS.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/asciiConvertion/AsciiConverter.scala, ${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/parser/CommandToken.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/filters/Filter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/core/Frame.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/core/AsciiImage.scala, ${BASE}/src/main/scala/core/AsciiTable.scala, ${BASE}/src/main/scala/output/OutputWriter.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/output/OutputWriter.scala), removed = Set(), changed = Set(${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/core/Image.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/asciiConvertion/LinearConverter.class, ${BASE}/target/scala-2.13/classes/filters/Rotate.class, ${BASE}/target/scala-2.13/classes/filters/Brightness.class, ${BASE}/target/scala-2.13/classes/core/Pixel$.class, ${BASE}/target/scala-2.13/classes/core/Pixel.class, ${BASE}/target/scala-2.13/classes/filters/Greyscale.class, ${BASE}/target/scala-2.13/classes/filters/Invert.class, ${BASE}/target/scala-2.13/classes/filters/Flip.class, ${BASE}/target/scala-2.13/classes/core/Image.class, ${BASE}/target/scala-2.13/classes/asciiConvertion/NonLinearConverter.class),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/AsciiImage.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/output/ConsoleAsciiOutputWriter.class, ${BASE}/target/scala-2.13/classes/output/AsciiFileOutputWriter.class, ${BASE}/target/scala-2.13/classes/core/AsciiImage.class),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set(${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/OutputWriter.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(${BASE}/target/scala-2.13/classes/asciiConvertion/LinearConverter.class, ${BASE}/target/scala-2.13/classes/filters/Rotate.class, ${BASE}/target/scala-2.13/classes/filters/Brightness.class, ${BASE}/target/scala-2.13/classes/core/Pixel$.class, ${BASE}/target/scala-2.13/classes/core/Pixel.class, ${BASE}/target/scala-2.13/classes/filters/Greyscale.class, ${BASE}/target/scala-2.13/classes/filters/Invert.class, ${BASE}/target/scala-2.13/classes/filters/Flip.class, ${BASE}/target/scala-2.13/classes/core/Image.class, ${BASE}/target/scala-2.13/classes/asciiConvertion/NonLinearConverter.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/AsciiImage.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(${BASE}/target/scala-2.13/classes/output/ConsoleAsciiOutputWriter.class, ${BASE}/target/scala-2.13/classes/output/AsciiFileOutputWriter.class, ${BASE}/target/scala-2.13/classes/core/AsciiImage.class)[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(core.Image, filters.Greyscale, filters.Flip, core.Pixel, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, filters.Rotate, filters.Brightness, filters.Invert)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(output.ConsoleAsciiOutputWriter, output.AsciiFileOutputWriter, core.AsciiImage)[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set(${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/AsciiImage.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(core.Image, filters.Greyscale, filters.Flip, core.Pixel, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, filters.Rotate, filters.Brightness, filters.Invert)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/OutputWriter.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: core.Image, filters.Greyscale, filters.Flip, core.Pixel, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, filters.Rotate, filters.Brightness, filters.Invert[0m
-[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0 percent of all sources[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(output.ConsoleAsciiOutputWriter, output.AsciiFileOutputWriter, core.AsciiImage)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/core/AsciiImage.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: output.ConsoleAsciiOutputWriter, output.AsciiFileOutputWriter, core.AsciiImage[0m
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 30 Scala sources to /home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to /home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.12/scala2-sbt-bridge-2.13.12.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 51fc0212 for Scala compiler version 2.13.12[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 756770b1 for Scala compiler version 2.13.12[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.191243742 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from core.AsciiImage...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: core.AsciiImage[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(core.AsciiImage)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of output.ConsoleAsciiOutputWriter: [UsedName(getWidth,[Default]), UsedName(getCharAt,[Default]), UsedName(getHeight,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of asciiConvertion.AsciiConverter. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of asciiConvertion.LinearConverter: [UsedName(chars,[Default]), UsedName(getWidth,[Default]), UsedName(getHeight,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of asciiConvertion.NonLinearConverter: [UsedName(chars,[Default]), UsedName(getWidth,[Default]), UsedName(getHeight,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of commands.convertToAsciiCmd. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of output.AsciiFileOutputWriter: [UsedName(getWidth,[Default]), UsedName(getCharAt,[Default]), UsedName(getHeight,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(core.AsciiImage,ModifiedNames(changes = UsedName(frame,[Default]), UsedName(getCharAt,[Default]), UsedName(chars,[Default]), UsedName(getWidth,[Default]), UsedName(getHeight,[Default]))) invalidates 5 classes due to The core.AsciiImage has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(frame,[Default]), UsedName(getCharAt,[Default]), UsedName(chars,[Default]), UsedName(getWidth,[Default]), UsedName(getHeight,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(core.AsciiImage)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(output.ConsoleAsciiOutputWriter, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, output.AsciiFileOutputWriter)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	output.ConsoleAsciiOutputWriter[0m
+[0m[[0m[0mdebug[0m] [0m[0m	asciiConvertion.LinearConverter[0m
+[0m[[0m[0mdebug[0m] [0m[0m	asciiConvertion.NonLinearConverter[0m
+[0m[[0m[0mdebug[0m] [0m[0m	output.AsciiFileOutputWriter[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: output.ConsoleAsciiOutputWriter, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, output.AsciiFileOutputWriter[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set(output.ConsoleAsciiOutputWriter, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, output.AsciiFileOutputWriter)[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.370934401 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: output.ConsoleAsciiOutputWriter, asciiConvertion.LinearConverter, asciiConvertion.NonLinearConverter, output.AsciiFileOutputWriter[0m
+[0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 2[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.12/scala2-sbt-bridge-2.13.12.jar.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 6d1d26e2 for Scala compiler version 2.13.12[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.369918851 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
