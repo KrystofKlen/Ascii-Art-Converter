@@ -1,1 +1,1 @@
-["filtersTest.RotateTest","filtersTest.GreyscaleTest","AsciiConertionTest.LinearConverterTest","filtersTest.TestFlip","filtersTest.FiltersTest","filtersTest.InvertTest"]
+["filtersTest.RotateTest","filtersTest.GreyscaleTest","AsciiConertionTest.LinearConverterTest","filtersTest.TestFlip","filtersTest.FiltersTest","AsciiConertionTest.NonLinearConverterTest","filtersTest.InvertTest"]

@@ -1,9 +1,10 @@
 #Successful Tests
-#Mon Nov 20 13:15:00 CET 2023
-filtersTest.RotateTest=1700482500419
-filtersTest.TestFlip=1700482500687
-filtersTest.FiltersTest=1700482500222
-AsciiConertionTest.LinearConverterTest=1700482499773
-filtersTest.GreyscaleTest=1700482500658
-filtersTest.InvertTest=1700482500558
+#Mon Nov 20 13:38:01 CET 2023
+filtersTest.TestFlip=1700483881111
+filtersTest.RotateTest=1700483881131
+AsciiConertionTest.NonLinearConverterTest=1700483881010
+filtersTest.FiltersTest=1700483880907
+AsciiConertionTest.LinearConverterTest=1700483881056
+filtersTest.GreyscaleTest=1700483881062
+filtersTest.InvertTest=1700483880961
 SaturationTest=1700426541707
