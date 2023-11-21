@@ -55,3 +55,6 @@
 1700574716351:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file
 1700574740159:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file "src/test/assets/pokus"
 1700591651222:run --image "src/test/assets/parrot.jpg" --invert --output-console
+1700595252870:run --image "src/test/assets/sunflower.jpg" --random-image --output-file "randomIMG.jpg"
+1700595384311:run --image "src/test/assets/sunflower.jpg" --image-random --output-file "randomIMG.jpg"
+1700595489967:run --image "src/test/assets/sunflower.jpg" --image-random --output-file "randomIMG.txt"

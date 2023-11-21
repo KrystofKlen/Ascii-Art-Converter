@@ -1,9 +1,7 @@
 [0m[[0m[31merror[0m] [0m[0mjava.lang.IllegalArgumentException[0m
-[0m[[0m[31merror[0m] [0m[0m	at commands.LinearExecutor.$anonfun$new$1(LinearExecutor.scala:77)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:333)[0m
-[0m[[0m[31merror[0m] [0m[0m	at commands.LinearExecutor.<init>(LinearExecutor.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m	at parser.ConsoleParser.parse(ConsoleParser.scala:54)[0m
 [0m[[0m[31merror[0m] [0m[0m	at Main$.delayedEndpoint$Main$1(Main.scala:7)[0m
-[0m[[0m[31merror[0m] [0m[0m	at Main$delayedInit$body.apply(Main.scala:4)[0m
+[0m[[0m[31merror[0m] [0m[0m	at Main$delayedInit$body.apply(Main.scala:5)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:42)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp$(Function0.scala:42)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)[0m
@@ -14,7 +12,7 @@
 [0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.App.main(App.scala:98)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.App.main$(App.scala:96)[0m
-[0m[[0m[31merror[0m] [0m[0m	at Main$.main(Main.scala:4)[0m
+[0m[[0m[31merror[0m] [0m[0m	at Main$.main(Main.scala:5)[0m
 [0m[[0m[31merror[0m] [0m[0m	at Main.main(Main.scala)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
