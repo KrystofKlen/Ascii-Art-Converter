@@ -2,6 +2,7 @@ package asciiConvertion
 import core.{AsciiImage, AsciiTable, Image}
 
 class LinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
+
   override def convert(image: Image): AsciiImage = {
     val width = image.getWidth
     val height = image.getHeight

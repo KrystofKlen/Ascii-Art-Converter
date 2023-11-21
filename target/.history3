@@ -37,3 +37,10 @@
 1700494736148:run --yuyu
 1700494745462:run --yuyu 90 9
 1700513761205:test
+1700525511918:run --image
+1700525540419:run --image "src/test/assets/bmw.jpg"
+1700525851277:run --image "src/test/assets/bmw.jpg" --invert
+1700526133077:run --image "src/test/assets/bmw.jpg" --invert --brightnes 30
+1700526224163:run --image "src/test/assets/bmw.jpg" --invert --brightness 30
+1700526750043:run --image "src/test/assets/bmw.jpg" --invert --brightness 30 --output-file
+1700527014503:run --image "src/test/assets/parrot.jpg" --invert --brightness 30 --output-file
