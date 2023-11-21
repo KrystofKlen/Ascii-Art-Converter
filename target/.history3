@@ -49,3 +49,8 @@
 1700570017884:run --image "src/test/assets/parrot.jpg" --output-console
 1700570203000:run --image "src/test/assets/parrot.jpg" --output-file
 1700570498634:run --image "src/test/assets/parrot.jpg" --output-console
+1700571311825:run --image "src/test/assets/parrot.jpg" -brightness 90 --output-file
+1700573687116:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file
+1700573785761:run --image "src/test/assets/parrot.jpg" --brightness ui --output-file
+1700574716351:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file
+1700574740159:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file "src/test/assets/pokus"
