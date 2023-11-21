@@ -7,7 +7,7 @@ import org.scalatest.funsuite.AnyFunSuite
 import output.{ConsoleAsciiOutputWriter, OutputWriter}
 
 class OutputConsoleTest extends AnyFunSuite{
-  ignore("Ascii output console"){
+  test("Ascii output console"){
     // load
     val loader = new ImageFileLoader("src/test/assets/bmw.jpg")
     val result = loader.load()

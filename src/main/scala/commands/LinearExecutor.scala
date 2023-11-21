@@ -1,10 +1,10 @@
 package commands
 
-import asciiConvertion.LinearConverter
+import asciiConvertion.{AsciiTableProvider, LinearConverter}
 import core.{AsciiTable, Image}
 import filters.{Brightness, FLIP_AXIS, Flip, Invert}
 import loader.ImageFileLoader
-import output.{AsciiFileOutputWriter, ImageFileOutputWriter}
+import output.{AsciiFileOutputWriter, ConsoleAsciiOutputWriter, ImageFileOutputWriter}
 import parser.CommandToken
 
 class LinearExecutor(cmdTokens: List[CommandToken]) extends Executor {
@@ -44,16 +44,20 @@ class LinearExecutor(cmdTokens: List[CommandToken]) extends Executor {
         img = filter.apply(img)
 
 
+      case CommandToken("output-console", _) =>
+        val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
+        val ascii = converter.convert(img)
+        val saver = new ConsoleAsciiOutputWriter
+        saver.output(ascii)
 
       case CommandToken("output-file",_)=>
         println("saved")
         println(token)
         val s = new ImageFileOutputWriter("src/test/assets/xxxxxxx.jpg","jpg")
         s.output(img)
-        val converter = new LinearConverter(AsciiTable(Array('$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']',
-          '?', '-', '_', '+', '~', '<', '>', 'i', '!', 'l', 'I', ';', ':', ',', '"', '^', '`', ' ', ' ')))
+        val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
         val ascii = converter.convert(img)
-        val saver = new AsciiFileOutputWriter("src/test/assets/xxxxx")
+        val saver = new AsciiFileOutputWriter("src/test/assets/yyy")
         saver.output(ascii)
 
     }

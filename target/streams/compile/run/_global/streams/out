@@ -1,7 +1,14 @@
 [0m[[0m[31merror[0m] [0m[0mjava.util.NoSuchElementException: None.get[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.None$.get(Option.scala:627)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.None$.get(Option.scala:626)[0m
-[0m[[0m[31merror[0m] [0m[0m	at commands.LinearExecutor.<init>(LinearExecutor.scala:28)[0m
+[0m[[0m[31merror[0m] [0m[0m	at output.ConsoleAsciiOutputWriter.$anonfun$output$2(ConsoleAsciiOutputWriter.scala:9)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)[0m
+[0m[[0m[31merror[0m] [0m[0m	at output.ConsoleAsciiOutputWriter.$anonfun$output$1(ConsoleAsciiOutputWriter.scala:8)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)[0m
+[0m[[0m[31merror[0m] [0m[0m	at output.ConsoleAsciiOutputWriter.output(ConsoleAsciiOutputWriter.scala:7)[0m
+[0m[[0m[31merror[0m] [0m[0m	at commands.LinearExecutor.$anonfun$new$1(LinearExecutor.scala:51)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:333)[0m
+[0m[[0m[31merror[0m] [0m[0m	at commands.LinearExecutor.<init>(LinearExecutor.scala:31)[0m
 [0m[[0m[31merror[0m] [0m[0m	at Main$.delayedEndpoint$Main$1(Main.scala:7)[0m
 [0m[[0m[31merror[0m] [0m[0m	at Main$delayedInit$body.apply(Main.scala:4)[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:42)[0m

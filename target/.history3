@@ -44,3 +44,8 @@
 1700526224163:run --image "src/test/assets/bmw.jpg" --invert --brightness 30
 1700526750043:run --image "src/test/assets/bmw.jpg" --invert --brightness 30 --output-file
 1700527014503:run --image "src/test/assets/parrot.jpg" --invert --brightness 30 --output-file
+1700569987239:run --image "src/test/assets/parrot.jpg --output-console
+1700570007790:run --image "src/test/assets/parrot.jpg
+1700570017884:run --image "src/test/assets/parrot.jpg" --output-console
+1700570203000:run --image "src/test/assets/parrot.jpg" --output-file
+1700570498634:run --image "src/test/assets/parrot.jpg" --output-console
