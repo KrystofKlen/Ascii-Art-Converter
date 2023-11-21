@@ -1,6 +1,6 @@
 package filters
 
-import core.Image
+import core.{Image, Pixel}
 
 import java.awt.image.BufferedImage
 
@@ -8,8 +8,7 @@ class Invert extends Filter {
   override def apply(originalImage: Image): Image = {
     val width = originalImage.getWidth
     val height = originalImage.getHeight
-
-    val invertedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
+    val pixels: Array[Array[Pixel]] = Array.ofDim[Pixel](width, height)
 
     for (y <- 0 until height) {
       for (x <- 0 until width) {
@@ -30,11 +29,11 @@ class Invert extends Filter {
         val invertedRGB: Int = (alpha << 24) | (red << 16) | (green << 8) | blue
 
         // Set the pixel in the new image
-        invertedImage.setRGB(x, y, invertedRGB)
+        pixels(x)(y) = new Pixel(invertedRGB)
       }
     }
 
-    new Image(Image.bufferedImageToPixels(invertedImage))
+    new Image(pixels)
   }
 }
 

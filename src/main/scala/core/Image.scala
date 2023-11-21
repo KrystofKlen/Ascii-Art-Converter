@@ -10,6 +10,16 @@ class Image(private val pixels: Array[Array[Pixel]]){
   def getWidth : Int = width
   def getHeight : Int = height
 
+  def getPixels : Array[Array[Pixel]] = {
+    val newPixels: Array[Array[Pixel]] = Array.ofDim[Pixel](width, height)
+    for (x <- 0 until width) {
+      for (y <- 0 until height) {
+          newPixels(x)(y) = pixels(x)(y)
+      }
+    }
+    newPixels
+  }
+
   def getBufferedImage: BufferedImage= {
     val bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
     val graphics: Graphics2D = bufferedImage.createGraphics()

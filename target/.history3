@@ -66,3 +66,4 @@
 1700605111902:run --image "src/test/assets/bmw.jpg" --flip x --output-console
 1700605127654:run --image "src/test/assets/bmw.jpg" --flip x --flip y --output-console
 1700605351871:run --image "src/test/assets/bmw.jpg" --brightness 90 --flip x --flip y --output-console
+1700605557595:run --image "src/test/assets/bmw.jpg" --brightness 90 --flip x --flip y --image-random --output-console

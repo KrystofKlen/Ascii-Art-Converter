@@ -15,7 +15,7 @@ class BrightnessTest extends AnyFunSuite {
     val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")
 
     // Apply Greyscale Saturation
-    val filter = new Brightness(80)
+    val filter = new Brightness(-80)
     val filtered = filter.apply(originalImage);
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()
     val output = new File("src/test/assets/sunflower_grey.jpg")
