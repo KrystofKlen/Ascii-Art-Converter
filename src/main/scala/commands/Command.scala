@@ -2,6 +2,7 @@ package commands
 
 import core.Image
 
-trait Command[T] {
-  def executeCommand(image: Image):T
+trait Command[A] {
+  val name: String
+  val arg: Option[A]
 }

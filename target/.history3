@@ -54,3 +54,4 @@
 1700573785761:run --image "src/test/assets/parrot.jpg" --brightness ui --output-file
 1700574716351:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file
 1700574740159:run --image "src/test/assets/parrot.jpg" --brightness 90 --output-file "src/test/assets/pokus"
+1700591651222:run --image "src/test/assets/parrot.jpg" --invert --output-console

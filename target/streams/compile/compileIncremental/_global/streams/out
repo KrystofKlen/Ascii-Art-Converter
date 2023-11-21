@@ -1,6 +1,245 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
 [0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 43 products, 35 sources, 1 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/filters/FLIP_AXIS.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/asciiConvertion/AsciiConverter.scala, ${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/parser/CommandToken.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/filters/Filter.scala, ${BASE}/src/main/scala/commands/LoadCommand.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/core/Frame.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/asciiConvertion/AsciiTableProvider.scala, ${BASE}/src/main/scala/core/AsciiImage.scala, ${BASE}/src/main/scala/core/AsciiTable.scala, ${BASE}/src/main/scala/output/OutputWriter.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/filters/FLIP_AXIS.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/filters/Flip.scala, ${BASE}/src/main/scala/loader/ImageLoader.scala, ${BASE}/src/main/scala/asciiConvertion/AsciiConverter.scala, ${BASE}/src/main/scala/commands/OutputConsoleCmd.scala, ${BASE}/src/main/scala/loader/ImageFileLoader.scala, ${BASE}/src/main/scala/core/Image.scala, ${BASE}/src/main/scala/parser/CommandToken.scala, ${BASE}/src/main/scala/commands/convertToAsciiCmd.scala, ${BASE}/src/main/scala/filters/Greyscale.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/filters/Invert.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/output/ImageFileOutputWriter.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/filters/Brightness.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/asciiConvertion/NonLinearConverter.scala, ${BASE}/src/main/scala/filters/Filter.scala, ${BASE}/src/main/scala/output/AsciiFileOutputWriter.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/core/Pixel.scala, ${BASE}/src/main/scala/commands/RandomImgCmd.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/core/Frame.scala, ${BASE}/src/main/scala/commands/OutputFileCmd.scala, ${BASE}/src/main/scala/commands/LinConv2.scala, ${BASE}/src/main/scala/filters/Rotate.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/asciiConvertion/LinearConverter.scala, ${BASE}/src/main/scala/output/ConsoleAsciiOutputWriter.scala, ${BASE}/src/main/scala/asciiConvertion/AsciiTableProvider.scala, ${BASE}/src/main/scala/core/AsciiImage.scala, ${BASE}/src/main/scala/core/AsciiTable.scala, ${BASE}/src/main/scala/output/OutputWriter.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/commands/LinConv2.scala, ${BASE}/src/main/scala/commands/OutputConsoleCmd.scala, ${BASE}/src/main/scala/commands/RandomImgCmd.scala, ${BASE}/src/main/scala/commands/OutputFileCmd.scala), removed = Set(${BASE}/src/main/scala/commands/LoadCommand.scala), changed = Set(${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/commands/Command.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/Main.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/classes/commands/LoadFromFile.class, ${BASE}/target/scala-2.13/classes/commands/Command.class, ${BASE}/target/scala-2.13/classes/Main$delayedInit$body.class, ${BASE}/target/scala-2.13/classes/parser/Parser.class, ${BASE}/target/scala-2.13/classes/Main.class, ${BASE}/target/scala-2.13/classes/commands/LinearExecutor.class, ${BASE}/target/scala-2.13/classes/Main$.class, ${BASE}/target/scala-2.13/classes/commands/BrightnessCmd.class, ${BASE}/target/scala-2.13/classes/parser/ConsoleParser.class, ${BASE}/target/scala-2.13/classes/commands/LoadCommand.class, ${BASE}/target/scala-2.13/classes/commands/Executor.class, ${BASE}/target/scala-2.13/classes/commands/FlipCmd.class, ${BASE}/target/scala-2.13/classes/commands/InvertCmd.class),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed: Set(${BASE}/src/main/scala/commands/LoadCommand.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(${BASE}/src/main/scala/commands/LinConv2.scala, ${BASE}/src/main/scala/commands/OutputConsoleCmd.scala, ${BASE}/src/main/scala/commands/RandomImgCmd.scala, ${BASE}/src/main/scala/commands/OutputFileCmd.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/commands/Command.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(${BASE}/target/scala-2.13/classes/commands/LoadFromFile.class, ${BASE}/target/scala-2.13/classes/commands/Command.class, ${BASE}/target/scala-2.13/classes/Main$delayedInit$body.class, ${BASE}/target/scala-2.13/classes/parser/Parser.class, ${BASE}/target/scala-2.13/classes/Main.class, ${BASE}/target/scala-2.13/classes/commands/LinearExecutor.class, ${BASE}/target/scala-2.13/classes/Main$.class, ${BASE}/target/scala-2.13/classes/commands/BrightnessCmd.class, ${BASE}/target/scala-2.13/classes/parser/ConsoleParser.class, ${BASE}/target/scala-2.13/classes/commands/LoadCommand.class, ${BASE}/target/scala-2.13/classes/commands/Executor.class, ${BASE}/target/scala-2.13/classes/commands/FlipCmd.class, ${BASE}/target/scala-2.13/classes/commands/InvertCmd.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(commands.BrightnessCmd, commands.Executor, commands.LinearExecutor, commands.FlipCmd, parser.ConsoleParser, commands.InvertCmd, commands.LoadCommand, commands.Command, parser.Parser, Main, commands.LoadFromFile)[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/commands/LoadCommand.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/commands/Command.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(commands.BrightnessCmd, commands.Executor, commands.LinearExecutor, commands.FlipCmd, parser.ConsoleParser, commands.InvertCmd, commands.LoadCommand, commands.Command, parser.Parser, Main, commands.LoadFromFile)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/commands/LoadFromFile.scala, ${BASE}/src/main/scala/commands/FlipCmd.scala, ${BASE}/src/main/scala/commands/OutputConsoleCmd.scala, ${BASE}/src/main/scala/commands/Executor.scala, ${BASE}/src/main/scala/parser/Parser.scala, ${BASE}/src/main/scala/commands/InvertCmd.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/commands/BrightnessCmd.scala, ${BASE}/src/main/scala/commands/LoadCommand.scala, ${BASE}/src/main/scala/commands/LinearExecutor.scala, ${BASE}/src/main/scala/commands/RandomImgCmd.scala, ${BASE}/src/main/scala/parser/ConsoleParser.scala, ${BASE}/src/main/scala/commands/OutputFileCmd.scala, ${BASE}/src/main/scala/commands/LinConv2.scala, ${BASE}/src/main/scala/commands/Command.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.BrightnessCmd, commands.Executor, commands.LinearExecutor, commands.FlipCmd, parser.ConsoleParser, commands.InvertCmd, commands.LoadCommand, commands.Command, parser.Parser, Main, commands.LoadFromFile[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.LinearExecutor by commands.Executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.LoadFromFile by commands.LoadCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 14 Scala sources to /home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.12/scala2-sbt-bridge-2.13.12.jar.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5714f74d for Scala compiler version 2.13.12[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/krystof/Documents/CVUT/OOP/AsciiArt/target/scala-2.13/classes[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from Main...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Main[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(Main,ModifiedNames(changes = UsedName(parser,[Default]), UsedName(res,[Default]), UsedName(exec,[Default]), UsedName(executor,[Default]), UsedName(commands,[Default]))) invalidates 1 classes due to The Main has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(parser,[Default]), UsedName(res,[Default]), UsedName(exec,[Default]), UsedName(executor,[Default]), UsedName(commands,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.OutputFileCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.OutputFileCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.OutputFileCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(OutputFileCmd,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(!=,[Default]), UsedName(OutputFileCmd,[Default]), UsedName(==,[Default]), UsedName(commands;OutputFileCmd;init;,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(OutputFileCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.OutputFileCmd,ModifiedNames(changes = UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(OutputFileCmd,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(commands;OutputFileCmd;init;,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]))) invalidates 4 classes due to The commands.OutputFileCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(OutputFileCmd,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(commands;OutputFileCmd;init;,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.OutputFileCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.InvertCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.InvertCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.InvertCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(arg,[Default]), UsedName(InvertCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(InvertCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(InvertCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.InvertCmd,ModifiedNames(changes = UsedName(name,[Default]), UsedName(InvertCmd,[Default]), UsedName(arg,[Default]))) invalidates 4 classes due to The commands.InvertCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(name,[Default]), UsedName(InvertCmd,[Default]), UsedName(arg,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.InvertCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.BrightnessCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.BrightnessCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.BrightnessCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(arg,[Default]), UsedName(BrightnessCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(BrightnessCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(BrightnessCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.BrightnessCmd,ModifiedNames(changes = UsedName(BrightnessCmd,[Default]), UsedName(name,[Default]), UsedName(executeCommand,[Default]), UsedName(arg,[Default]))) invalidates 4 classes due to The commands.BrightnessCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(BrightnessCmd,[Default]), UsedName(name,[Default]), UsedName(executeCommand,[Default]), UsedName(arg,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.BrightnessCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.Command...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.BrightnessCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.OutputConsoleCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.FlipCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.InvertCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.RandomImgCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.LoadFromFile by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.OutputFileCmd by commands.Command[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.BrightnessCmd, commands.OutputConsoleCmd, commands.FlipCmd, commands.InvertCmd, commands.Command, commands.RandomImgCmd, commands.LoadFromFile, commands.OutputFileCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.BrightnessCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.OutputConsoleCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.FlipCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.InvertCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.Parser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.RandomImgCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LoadFromFile: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.OutputFileCmd: [UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(Command,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(Command,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.Command,ModifiedNames(changes = UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default]), UsedName(executeCommand,[Default]))) invalidates 12 classes due to The commands.Command has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(arg,[Default]), UsedName(Command,[Default]), UsedName(name,[Default]), UsedName(executeCommand,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.BrightnessCmd, commands.OutputConsoleCmd, commands.FlipCmd, commands.InvertCmd, commands.Command, commands.RandomImgCmd, commands.LoadFromFile, commands.OutputFileCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.BrightnessCmd, commands.OutputConsoleCmd, commands.FlipCmd, parser.ConsoleParser, commands.InvertCmd, parser.Parser, Main, commands.RandomImgCmd, commands.LoadFromFile, commands.OutputFileCmd, commands.LinConv2)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.OutputConsoleCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.OutputConsoleCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.OutputConsoleCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(OutputConsoleCmd,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(!=,[Default]), UsedName(commands;OutputConsoleCmd;init;,[Default]), UsedName(OutputConsoleCmd,[Default]), UsedName(==,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(OutputConsoleCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.OutputConsoleCmd,ModifiedNames(changes = UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(commands;OutputConsoleCmd;init;,[Default]), UsedName(OutputConsoleCmd,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]))) invalidates 4 classes due to The commands.OutputConsoleCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(commands;OutputConsoleCmd;init;,[Default]), UsedName(OutputConsoleCmd,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.OutputConsoleCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.FlipCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.FlipCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.FlipCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(FlipCmd,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(commands;FlipCmd;init;,[Default]), UsedName(FlipCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(FlipCmd,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.FlipCmd,ModifiedNames(changes = UsedName(commands;FlipCmd;init;,[Default]), UsedName(arg,[Default]), UsedName(FlipCmd,[Default]), UsedName(name,[Default]))) invalidates 4 classes due to The commands.FlipCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(commands;FlipCmd;init;,[Default]), UsedName(arg,[Default]), UsedName(FlipCmd,[Default]), UsedName(name,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.FlipCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.LoadFromFile...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.LoadFromFile[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.LoadFromFile)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of commands.LinConv2: [UsedName(LoadFromFile,[Default]), UsedName(arg,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(LoadFromFile,[Default]), UsedName(commands;LoadFromFile;init;,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(LoadFromFile,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.LoadFromFile,ModifiedNames(changes = UsedName(LoadFromFile,[Default]), UsedName(name,[Default]), UsedName(arg,[Default]), UsedName(execute,[Default]), UsedName(commands;LoadFromFile;init;,[Default]))) invalidates 4 classes due to The commands.LoadFromFile has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(LoadFromFile,[Default]), UsedName(name,[Default]), UsedName(arg,[Default]), UsedName(execute,[Default]), UsedName(commands;LoadFromFile;init;,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.LoadFromFile)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(commands.LinConv2, parser.ConsoleParser, Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.LinConv2...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.LinConv2[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.LinConv2)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(commands;LinConv2;init;,[Default]), UsedName(LinConv2,[Default]), UsedName(executeCommands,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.LinConv2,ModifiedNames(changes = UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(LinConv2,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(commands;LinConv2;init;,[Default]), UsedName(executeCommands,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]))) invalidates 2 classes due to The commands.LinConv2 has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(LinConv2,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(commands;LinConv2;init;,[Default]), UsedName(executeCommands,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.LinConv2)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from parser.Parser...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: parser.Parser[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding parser.ConsoleParser by parser.Parser[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(parser.ConsoleParser, parser.Parser)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(parse,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of parser.ConsoleParser. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(parse,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(parser.Parser,ModifiedNames(changes = UsedName(parse,[Default]))) invalidates 3 classes due to The parser.Parser has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(parse,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(parser.ConsoleParser, parser.Parser)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.LoadCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.LoadCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.LoadCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.LoadCommand,ModifiedNames(changes = UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(execute,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(LoadCommand,[Default]), UsedName(notify,[Default]))) invalidates 1 classes due to The commands.LoadCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(execute,[Default]), UsedName(ne,[Default]), UsedName(==,[Default]), UsedName(LoadCommand,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.LoadCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.Executor...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.Executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.LinearExecutor by commands.Executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding commands.LinConv2 by commands.Executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.LinearExecutor, commands.Executor, commands.LinConv2)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(executeCommands,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of commands.LinearExecutor. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of commands.LinConv2. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(executeCommands,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(executeCommands,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.Executor,ModifiedNames(changes = UsedName(executeCommands,[Default]))) invalidates 4 classes due to The commands.Executor has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(executeCommands,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.LinearExecutor, commands.Executor, commands.LinConv2)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.RandomImgCmd...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.RandomImgCmd[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.RandomImgCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of parser.ConsoleParser: [UsedName(!=,[Default]), UsedName(RandomImgCmd,[Default]), UsedName(commands;RandomImgCmd;init;,[Default]), UsedName(==,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.RandomImgCmd,ModifiedNames(changes = UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(RandomImgCmd,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(commands;RandomImgCmd;init;,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]))) invalidates 2 classes due to The commands.RandomImgCmd has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(wait,[Default]), UsedName(##,[Default]), UsedName(!=,[Default]), UsedName(synchronized,[Default]), UsedName(RandomImgCmd,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(isInstanceOf,[Default]), UsedName(name,[Default]), UsedName(equals,[Default]), UsedName(getClass,[Default]), UsedName(arg,[Default]), UsedName(eq,[Default]), UsedName(toString,[Default]), UsedName(finalize,[Default]), UsedName(ne,[Default]), UsedName(commands;RandomImgCmd;init;,[Default]), UsedName(==,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.RandomImgCmd)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(parser.ConsoleParser)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from parser.ConsoleParser...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: parser.ConsoleParser[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(parser.ConsoleParser)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(parse,[Default]), UsedName(parser;ConsoleParser;init;,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(parser.ConsoleParser,ModifiedNames(changes = UsedName(parse,[Default]), UsedName(parser;ConsoleParser;init;,[Default]))) invalidates 2 classes due to The parser.ConsoleParser has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(parse,[Default]), UsedName(parser;ConsoleParser;init;,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(parser.ConsoleParser)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from commands.LinearExecutor...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: commands.LinearExecutor[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(commands.LinearExecutor)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of Main: [UsedName(executeCommands,[Default])][0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(commands.LinearExecutor,ModifiedNames(changes = UsedName(asciiTableSelected,[Default]), UsedName(loader,[Default]), UsedName(imgOpt,[Default]), UsedName(img,[Default]), UsedName(loadImage,[Default]), UsedName(option,[Default]), UsedName(executeCommands,[Default]))) invalidates 2 classes due to The commands.LinearExecutor has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(asciiTableSelected,[Default]), UsedName(loader,[Default]), UsedName(imgOpt,[Default]), UsedName(img,[Default]), UsedName(loadImage,[Default]), UsedName(option,[Default]), UsedName(executeCommands,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(commands.LinearExecutor)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by member reference: Set(Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 3.084384336 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

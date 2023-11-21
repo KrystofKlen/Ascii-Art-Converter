@@ -1,8 +1,8 @@
 package commands
 import core.Image
+import loader.ImageFileLoader
 
-class LoadFromFile(imgPath:String) extends LoadCommand {
-  override def execute(): Image = {
-      return null
-  }
+class LoadFromFile(src: String) extends Command[String] {
+  override val name: String = "image"
+  override val arg: Option[String] = Option(src)
 }

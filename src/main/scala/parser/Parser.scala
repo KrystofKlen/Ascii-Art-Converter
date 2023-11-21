@@ -1,5 +1,7 @@
 package parser
 
+import commands.Command
+
 trait Parser {
-  def parse():List[CommandToken]
+  def parse():List[Command[_]]
 }
