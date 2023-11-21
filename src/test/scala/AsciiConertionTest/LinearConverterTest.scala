@@ -1,6 +1,6 @@
 package AsciiConertionTest
 
-import asciiConvertion.{AsciiConverter, LinearConverter}
+import asciiConvertion.{AsciiConverter, AsciiTableProvider, LinearConverter}
 import core.AsciiTable
 import org.scalatest.funsuite.AnyFunSuite
 import testUtils.TestUtils
@@ -14,10 +14,7 @@ class LinearConverterTest extends AnyFunSuite{
     val img = utils.loadImg("src/test/assets/parrot.jpg")
     val converter: AsciiConverter =
       new LinearConverter(
-      AsciiTable(
-        Array('$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']',
-          '?', '-', '_', '+', '~', '<', '>', 'i', '!', 'l', 'I', ';', ':', ',', '"', '^', '`', ' ' ,' ')
-      )
+      AsciiTableProvider.DEFAULT_TABLE
       )
     val result = converter.convert(img)
     try {
