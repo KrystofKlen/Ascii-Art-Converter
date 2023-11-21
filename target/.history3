@@ -58,3 +58,7 @@
 1700595252870:run --image "src/test/assets/sunflower.jpg" --random-image --output-file "randomIMG.jpg"
 1700595384311:run --image "src/test/assets/sunflower.jpg" --image-random --output-file "randomIMG.jpg"
 1700595489967:run --image "src/test/assets/sunflower.jpg" --image-random --output-file "randomIMG.txt"
+1700599185226:run --image "src/test/assets/bmw.jpg" --output-console
+1700599213079:run --image "src/test/assets/bmw.jpg" --brightness hello --output-console
+1700599256483:run --image "src/test/assets/bmw.jpg" --flip y --output-console
+1700599277431:run --image "src/test/assets/bmw.jpg" --output-file " g g g" --output-console

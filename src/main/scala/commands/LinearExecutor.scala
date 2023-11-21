@@ -1,8 +1,8 @@
 package commands
 
-import asciiConvertion.{AsciiTableProvider, LinearConverter}
-import core.Image
-import filters.{Brightness, Flip, Greyscale, Invert}
+import asciiConvertion.{AsciiConverter, AsciiTableProvider, LinearConverter}
+import core.{AsciiImage, Image}
+import filters.{Brightness, Filter, Flip, Greyscale, Invert}
 import imageGenerators.RandomImageGenerator
 import loader.ImageFileLoader
 import output.{AsciiFileOutputWriter, ConsoleAsciiOutputWriter}
@@ -11,6 +11,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
   override def executeCommands(): Unit = {
 
     var imgProduct: Option[Image] = Option.empty
+
     cmds.foreach {
       case cmd: Command[_] => {
         cmd match {
@@ -26,16 +27,13 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
       case cmd: Command[_] => {
         cmd match {
           case command: BrightnessCmd =>
-            val filter = new Brightness(command.arg.get)
-            imgProduct = Option( filter.apply( imgProduct.getOrElse(throw new Exception )))
+            imgProduct = applyFilter(new Brightness(command.arg.get),imgProduct)
 
           case command: FlipCmd =>
-            val filter = new Flip(command.arg.get)
-            imgProduct = Option(filter.apply(imgProduct.getOrElse(throw new Exception)))
+            imgProduct = applyFilter( new Flip(command.arg.get) ,imgProduct)
 
           case command: InvertCmd =>
-            val filter = new Invert()
-            imgProduct = Option(filter.apply(imgProduct.getOrElse(throw new Exception)))
+            imgProduct = applyFilter( new Invert() ,imgProduct)
 
           case command: RandomImgCmd =>
             val imageGenerator = new RandomImageGenerator
@@ -50,22 +48,25 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
       case cmd: Command[_] => {
             cmd match {
               case command: OutputFileCmd =>
-                val filter = new Greyscale
-                imgProduct = Option(filter.apply(imgProduct.getOrElse(throw new Exception())))
-                val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
-                val ascii = converter.convert(imgProduct.getOrElse(throw new Exception()))
+                imgProduct = applyFilter(new Greyscale, imgProduct)
                 val outputCmd = new AsciiFileOutputWriter(command.arg.get)
-                outputCmd.output(ascii)
+                outputCmd.output(getAsciiArt(imgProduct))
               case command: OutputConsoleCmd =>
-                val filter = new Greyscale
-                imgProduct = Option(filter.apply(imgProduct.getOrElse(throw new Exception())))
-                val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
-                val ascii = converter.convert(imgProduct.getOrElse(throw new Exception()))
+                imgProduct = applyFilter(new Greyscale, imgProduct)
                 val outputCmd = new ConsoleAsciiOutputWriter
-                outputCmd.output(ascii)
+                outputCmd.output(getAsciiArt(imgProduct))
               case _ =>
             }
       }
     }
+  }
+
+  private def applyFilter(filter: Filter,imgProduct: Option[Image]): Option[Image] = {
+    Option(filter.apply(imgProduct.getOrElse(throw new Exception)))
+  }
+
+  private def getAsciiArt(imgProduct: Option[Image]): AsciiImage = {
+    val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
+    converter.convert(imgProduct.getOrElse(throw new Exception()))
   }
 }

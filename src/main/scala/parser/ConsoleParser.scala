@@ -54,7 +54,11 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
           throw new IllegalArgumentException()
       }
     }
-    println(parsedCommands)
+    parsedCommands.foreach(cmd =>{
+      if(! cmd.checkArgs() ){
+        throw new IllegalArgumentException("Wrong argument by " + cmd.name + " command.")
+      }
+    })
     parsedCommands
   }
 
