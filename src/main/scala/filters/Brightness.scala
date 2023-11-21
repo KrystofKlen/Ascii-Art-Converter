@@ -1,14 +1,15 @@
 package filters
-import core.Image
+import core.{Image, Pixel}
 
+import java.awt.Color
 import java.awt.image.BufferedImage
 
 class Brightness(val brightness: Int) extends Filter {
 
   override def apply(originalImage: Image): Image = {
-    val brightenedImage = new BufferedImage(
-      originalImage.getWidth, originalImage.getHeight, originalImage.getType
-    )
+
+    val pixels: Array[Array[Pixel]] = Array.ofDim[Pixel](originalImage.getWidth, originalImage.getHeight)
+
     val brightnessAdjusted = adjustBrightness(brightness)
     for (y <- 0 until originalImage.getHeight) {
       for (x <- 0 until originalImage.getWidth) {
@@ -32,11 +33,11 @@ class Brightness(val brightness: Int) extends Filter {
         // Recombine color components
         val adjustedRGB: Int = (alpha << 24) | (red << 16) | (green << 8) | blue
 
-        brightenedImage.setRGB(x, y, adjustedRGB)
+        pixels(x)(y) = new Pixel(adjustedRGB)
       }
     }
 
-    new Image(brightenedImage)
+    new Image(pixels)
 
   }
 

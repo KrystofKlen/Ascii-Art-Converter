@@ -1,50 +1,20 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.GreyscaleTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(outputTests.OutputFileTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.NonLinearConverterTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(loaderTests.ImageFileLoaderTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(commandsTests.CommandsTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.LinearConverterTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(loaderTests.ImageFileLoaderTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.NonLinearConverterTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Commands receiving correct Arguments[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Commands receiving wrong Arguments[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(outputTests.OutputConsoleTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.TestFlip, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.InvertTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLinearConverterTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- ascii linear[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mImageFileLoaderTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Loading Image from file[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Loading Non-Existing Image from file[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(outputTests.OutputConsoleTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.InvertTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.RotateTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mOutputFileTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should create a file and write image in the file[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should create file with ascii art[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.BrightnessTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AsciiConertionTest.LinearConverterTest, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.TestFlip, org.scalatest.tools.Framework$$anon$1@12881153, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mNonLinearConverterTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- ascii non-linear[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mOutputConsoleTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[33m- Ascii output console !!! IGNORED !!![0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInvertTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Image is inverted[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRotateTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rotation test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBrightnessTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Brightness test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mLinearConverterTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ascii linear[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mGreyscaleTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Greyscale Saturation test.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mTestFlip:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Y flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- X flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Double flip[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 957 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 13[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 10, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 13, failed 0, canceled 0, ignored 1, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.RotateTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.BrightnessTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	outputTests.OutputFileTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.GreyscaleTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AsciiConertionTest.LinearConverterTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	outputTests.OutputConsoleTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.TestFlip[0m
-[0m[[0m[0mdebug[0m] [0m[0m	loaderTests.ImageFileLoaderTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	AsciiConertionTest.NonLinearConverterTest[0m
-[0m[[0m[0mdebug[0m] [0m[0m	filtersTest.InvertTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(parserTests.ConsoleParserTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.RotateTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(filtersTest.GreyscaleTest, org.scalatest.tools.Framework$$anon$1@1540d75e, false, [SuiteSelector])[0m

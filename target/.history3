@@ -62,3 +62,7 @@
 1700599213079:run --image "src/test/assets/bmw.jpg" --brightness hello --output-console
 1700599256483:run --image "src/test/assets/bmw.jpg" --flip y --output-console
 1700599277431:run --image "src/test/assets/bmw.jpg" --output-file " g g g" --output-console
+1700605048614:test
+1700605111902:run --image "src/test/assets/bmw.jpg" --flip x --output-console
+1700605127654:run --image "src/test/assets/bmw.jpg" --flip x --flip y --output-console
+1700605351871:run --image "src/test/assets/bmw.jpg" --brightness 90 --flip x --flip y --output-console

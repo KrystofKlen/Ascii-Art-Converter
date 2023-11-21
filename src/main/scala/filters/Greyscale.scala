@@ -30,6 +30,6 @@ class Greyscale extends Filter {
       }
     }
 
-    new Image(greyscaleImage)
+    new Image(Image.bufferedImageToPixels(greyscaleImage))
   }
 }

@@ -10,7 +10,7 @@ class ImageFileLoader(fileLocation: String) extends ImageLoader {
     try {
       val imageBuf = ImageIO.read(new File(fileLocation))
       // Return true if the image is successfully loaded
-      Option(new Image(imageBuf))
+      Option(new Image(Image.bufferedImageToPixels(imageBuf)))
     } catch {
       case e: IOException =>
         Option(null)

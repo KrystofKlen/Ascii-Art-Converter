@@ -23,6 +23,6 @@ class RandomImageGenerator extends ImageGenerator {
     }
 
     graphics.dispose()
-    new Image(bufferedImage)
+    new Image(Image.bufferedImageToPixels(bufferedImage))
   }
 }

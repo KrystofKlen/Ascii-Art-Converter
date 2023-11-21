@@ -9,7 +9,8 @@ class TestUtils {
   def loadImg(src: String): Image = {
     val imagePath = src
     // Load the image using ImageIO
-    new Image(ImageIO.read(new java.io.File(imagePath)))
+    new Image(Image.bufferedImageToPixels(
+      ImageIO.read(new java.io.File(imagePath))))
   }
 
   def saveToFile(filtered: Image): Unit = {

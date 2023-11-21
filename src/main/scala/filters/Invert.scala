@@ -9,7 +9,7 @@ class Invert extends Filter {
     val width = originalImage.getWidth
     val height = originalImage.getHeight
 
-    val invertedImage = new BufferedImage(width, height, originalImage.getType)
+    val invertedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
 
     for (y <- 0 until height) {
       for (x <- 0 until width) {
@@ -34,7 +34,7 @@ class Invert extends Filter {
       }
     }
 
-    new Image(invertedImage)
+    new Image(Image.bufferedImageToPixels(invertedImage))
   }
 }
 
