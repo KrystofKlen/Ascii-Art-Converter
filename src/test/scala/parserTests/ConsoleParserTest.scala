@@ -9,8 +9,8 @@ import java.util
 
 class ConsoleParserTest extends AnyFunSuite{
 
-    val parser1 = new ConsoleParser(List("--image", "src", "--invert", "--image-random",
-      "--brightness", "90", "--flip", "x", "--output-file", "dst", "--output-console"))
+    val parser1 = new ConsoleParser(List("--image", "src/file.jpg", "--invert", "--image-random",
+      "--brightness", "90", "--flip", "x", "--output-file", "src/dst.txt", "--output-console"))
 
     test("Console parser: Parsed all args") {
       val commands1 = parser1.parse()
@@ -56,7 +56,7 @@ class ConsoleParserTest extends AnyFunSuite{
 
     test("Should throw exception - invalid value for brightness"){
       val parserIncorrectInput2 = new ConsoleParser(List("--brightness", "klkl"))
-      intercept[NumberFormatException] {
+      intercept[IllegalArgumentException] {
         parserIncorrectInput2.parse()
       }
     }

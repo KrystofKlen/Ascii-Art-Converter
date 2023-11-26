@@ -17,17 +17,28 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
           parsedCommands :+= new LoadFromFile(src)
           remainingArgs = tail
 
+        case "--image" :: tail =>
+          throw new IllegalArgumentException("No src path for --image")
+
         case "--invert" :: tail =>
           parsedCommands :+= new InvertCmd
           remainingArgs = tail
 
         case "--brightness" :: value :: tail =>
-          parsedCommands :+= new BrightnessCmd(value.toInt)
-          remainingArgs = tail
+          try{
+            parsedCommands :+= new BrightnessCmd(value.toInt)
+            remainingArgs = tail
+          }catch {
+            case _: NumberFormatException =>
+              throw new IllegalArgumentException("Argument not convertable to Int")
+          }
 
-        case "--flip" :: axis :: tail if axis.length == 1 =>
+        case "--brightness" :: tail =>
+          throw new IllegalArgumentException("No value for --brightness")
+
+        case "--flip" :: axis :: tail =>
           if(axis.length != 1){
-            throw new IllegalArgumentException()
+            throw new IllegalArgumentException("Invalid argument for --flip")
           }
           if(axis.charAt(0) == 'x'){
             parsedCommands :+= new FlipCmd(FLIP_AXIS.X)
@@ -37,9 +48,15 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
           }
           remainingArgs = tail
 
+        case "--flip" :: tail =>
+          throw new IllegalArgumentException("No axis for --flip")
+
         case "--output-file" :: dst :: tail =>
           parsedCommands :+= new OutputFileCmd(dst)
           remainingArgs = tail
+
+        case "--output-file" :: tail =>
+          throw new IllegalArgumentException("No dst path for --output-file")
 
         case "--output-console" :: tail =>
           parsedCommands :+= new OutputConsoleCmd
@@ -50,13 +67,12 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
           remainingArgs = tail
 
         case _ =>
-          // Handle unknown or invalid commands
-          throw new IllegalArgumentException()
+          throw new IllegalArgumentException("Unexpected token: " + remainingArgs.head)
       }
     }
     parsedCommands.foreach(cmd =>{
       if(! cmd.checkArgs() ){
-        throw new IllegalArgumentException("Wrong argument by " + cmd.name + " command.")
+        throw new IllegalArgumentException("Wrong argument by " + cmd.name + " command: " + cmd.arg.getOrElse("NO ARG"))
       }
     })
     parsedCommands
