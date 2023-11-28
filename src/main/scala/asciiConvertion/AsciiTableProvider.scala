@@ -1,5 +1,6 @@
 package asciiConvertion
 
+import asciiConvertion.AsciiTableProvider.{DEFAULT_TABLE, DENSE_TABLE, SPARCE_TABLE, customTable}
 import core.AsciiTable
 
 case object AsciiTableProvider{
@@ -15,5 +16,13 @@ case object AsciiTableProvider{
   val SPARCE_TABLE = AsciiTable(Array('@', 'O', 'C', 'X', 'y', 'l', 'i', '!', ';', ',', '^', '`'))
 
   def customTable(chars : Array[Char]) = AsciiTable(chars)
+
+  def getTable(name: String): AsciiTable = {
+    name match {
+      case "DENSE_TABLE" => DENSE_TABLE
+      case "SPARCE_TABLE" => SPARCE_TABLE
+      case _ =>  DEFAULT_TABLE
+    }
+  }
 
 }

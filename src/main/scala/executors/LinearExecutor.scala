@@ -2,7 +2,7 @@ package executors
 
 import asciiConvertion.{AsciiTableProvider, LinearConverter}
 import commands._
-import core.{AsciiImage, Image}
+import core.{AsciiImage, AsciiTable, Image}
 import filters._
 import imageGenerators.RandomImageGenerator
 import loader.ImageFileLoader
@@ -12,6 +12,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
   override def executeCommands(): Unit = {
 
     var imgProduct: Option[Image] = Option.empty
+    var asciiTable = AsciiTableProvider.DEFAULT_TABLE
 
     cmds.foreach {
       case cmd: Command[_] => {
@@ -40,6 +41,11 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
             val imageGenerator = new RandomImageGenerator
             imgProduct = Option(imageGenerator.generateImage())
 
+          case command: CustomTableCmd =>
+            asciiTable = AsciiTableProvider.customTable(command.arg.get.chars)
+
+          case command: PickAsciiTableCmd =>
+            asciiTable = command.arg.get
           case _ =>
         }
       }
@@ -51,11 +57,11 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
               case command: OutputFileCmd =>
                 imgProduct = applyFilter(new Greyscale, imgProduct)
                 val outputCmd = new AsciiFileOutputWriter(command.arg.get)
-                outputCmd.output(getAsciiArt(imgProduct))
+                outputCmd.output(getAsciiArt(imgProduct,asciiTable))
               case command: OutputConsoleCmd =>
                 imgProduct = applyFilter(new Greyscale, imgProduct)
                 val outputCmd = new ConsoleAsciiOutputWriter
-                outputCmd.output(getAsciiArt(imgProduct))
+                outputCmd.output(getAsciiArt(imgProduct,asciiTable))
               case _ =>
             }
       }
@@ -81,8 +87,8 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
     Option(filter.apply(imgProduct.getOrElse(throw new Exception)))
   }
 
-  private def getAsciiArt(imgProduct: Option[Image]): AsciiImage = {
-    val converter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
+  private def getAsciiArt(imgProduct: Option[Image], asciiTable: AsciiTable): AsciiImage = {
+    val converter = new LinearConverter(asciiTable)
     converter.convert(imgProduct.getOrElse(throw new Exception()))
   }
 }

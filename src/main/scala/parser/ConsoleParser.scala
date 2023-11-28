@@ -1,6 +1,7 @@
 package parser
 
-import commands.{BrightnessCmd, Command, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
+import asciiConvertion.AsciiTableProvider
+import commands.{BrightnessCmd, Command, CustomTableCmd, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, PickAsciiTableCmd, RandomImgCmd}
 import filters.FLIP_AXIS
 
 import java.util
@@ -64,6 +65,14 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
 
         case "--image-random" :: tail =>
           parsedCommands :+= new RandomImgCmd()
+          remainingArgs = tail
+
+        case "--custom-table" :: table :: tail =>
+          parsedCommands :+= new CustomTableCmd(AsciiTableProvider.customTable(table.toCharArray))
+          remainingArgs = tail
+
+        case "--table" :: name :: tail =>
+          parsedCommands :+= new PickAsciiTableCmd(AsciiTableProvider.getTable(name))
           remainingArgs = tail
 
         case _ =>
