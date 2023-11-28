@@ -1,33 +1,26 @@
 package outputTests
 
-import asciiConvertion.{AsciiConverter, LinearConverter}
+import asciiConvertion.{AsciiConverter, AsciiTableProvider, LinearConverter}
 import core.{AsciiImage, AsciiTable, Image}
 import loader.ImageFileLoader
 import org.scalatest.funsuite.AnyFunSuite
 import output.{AsciiFileOutputWriter, ConsoleAsciiOutputWriter, ImageFileOutputWriter, OutputWriter}
+import testUtils.TestUtils
 
 class OutputFileTest extends AnyFunSuite{
 
   test("should create a file and write image in the file"){
-    val loader = new ImageFileLoader("src/test/assets/parrot.jpg")
-    val result = loader.load()
-    if(result.isEmpty) fail("could not load")
-    val output:OutputWriter[Image] = new ImageFileOutputWriter("src/test/assets/test_output.jpg","jpg")
-    val success = output.output(result.get)
+    val result = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
+    val output:OutputWriter[Image] = new ImageFileOutputWriter(TestUtils.PATH_TEST_RESULTS + TestUtils.OUTPUT_FILE_RESULT,"jpg")
+    val success = output.output(result)
     assert(success)
   }
 
   test("should create file with ascii art"){
-    val loader = new ImageFileLoader("src/test/assets/parrot.jpg")
-    val result = loader.load()
-    if (result.isEmpty) fail("could not load")
-
-    val output: OutputWriter[AsciiImage] = new AsciiFileOutputWriter("src/test/assets/test_output_2");
-    val converter: AsciiConverter = new LinearConverter(
-      AsciiTable(Array('$', '@', 'B', '%', '8', '&', 'W', 'M', '#', '*', 'o', 'a', 'h', 'k', 'b', 'd', 'p', 'q', 'w', 'm', 'Z', 'O', '0', 'Q', 'L', 'C', 'J', 'U', 'Y', 'X', 'z', 'c', 'v', 'u', 'n', 'x', 'r', 'j', 'f', 't', '/', '\\', '|', '(', ')', '1', '{', '}', '[', ']',
-        '?', '-', '_', '+', '~', '<', '>', 'i', '!', 'l', 'I', ';', ':', ',', '"', '^', '`', ' ', ' '))
-    )
-    val asciiArt = converter.convert(result.get)
+    val result = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
+    val output: OutputWriter[AsciiImage] = new AsciiFileOutputWriter(TestUtils.PATH_TEST_RESULTS + TestUtils.OUTPUT_FILE_ASCII_RESULT);
+    val converter: AsciiConverter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
+    val asciiArt = converter.convert(result)
     val success = output.output(asciiArt)
     assert(success)
   }

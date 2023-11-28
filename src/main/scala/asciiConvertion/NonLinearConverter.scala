@@ -31,7 +31,6 @@ class NonLinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
     val nonLinearGray = nonLinearMap(gray)
 
     // Map the transformed grayscale value to an index in the transformation table
-    // Adjust the range based on the transformation table length
     val tableLength = asciiTable.chars.length
     ((nonLinearGray.toDouble / 255) * (tableLength - 1)).toInt
   }

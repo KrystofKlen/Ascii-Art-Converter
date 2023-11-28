@@ -10,8 +10,7 @@ import java.io.{BufferedWriter, FileWriter, IOException}
 class LinearConverterTest extends AnyFunSuite{
 
   test("ascii linear"){
-    val utils = new TestUtils
-    val img = utils.loadImg("src/test/assets/parrot.jpg")
+    val img = TestUtils.loadImg("src/test/assets/parrot.jpg")
     val converter: AsciiConverter =
       new LinearConverter(
       AsciiTableProvider.DEFAULT_TABLE

@@ -2,13 +2,14 @@ package loaderTests
 
 import loader.ImageFileLoader
 import org.scalatest.funsuite.AnyFunSuite
+import testUtils.TestUtils
 
 import scala.Console.in
 
 class ImageFileLoaderTest  extends AnyFunSuite {
 
   test("Loading Image from file"){
-    val loader = new ImageFileLoader("src/test/assets/parrot.jpg")
+    val loader = new ImageFileLoader(TestUtils.TEST_IMG_SRC)
     val result = loader.load()
     assert(result.isDefined)
   }

@@ -5,10 +5,9 @@ import org.scalatest.funsuite.AnyFunSuite
 import testUtils.TestUtils
 
 class GreyscaleTest extends AnyFunSuite{
-  val utils = new TestUtils
 
   test("Greyscale Saturation test.") {
-    val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")
+    val originalImage = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
     // Apply Greyscale Saturation
     val filter = new Greyscale()
     val filtered = filter.apply(originalImage)
@@ -27,7 +26,7 @@ class GreyscaleTest extends AnyFunSuite{
         assert(red == green && red == blue)
       }
     }
-    utils.saveToFile(filtered)
+    TestUtils.saveToFile(filtered,TestUtils.PATH_TEST_RESULTS + TestUtils.GREYSCALE_RESULT)
   }
 
 }

@@ -1,6 +1,6 @@
 package commands
 
-class LoadFromFile(src: String) extends Command[String] {
+class LoadFromFileCmd(src: String) extends Command[String] {
   override val name: String = "image"
   override val arg: Option[String] = Option(src)
 

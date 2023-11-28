@@ -29,7 +29,6 @@ class LinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
     val gray = (0.299 * red + 0.587 * green + 0.114 * blue).toInt
 
     // Map the grayscale value to an index in the ASCII table
-    // Adjust the range based on the ASCII table length
     val asciiTableLength = asciiTable.chars.length
     ((gray.toDouble / 255) * (asciiTableLength - 1)).toInt
   }

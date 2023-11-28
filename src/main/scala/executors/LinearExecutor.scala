@@ -1,8 +1,9 @@
-package commands
+package executors
 
-import asciiConvertion.{AsciiConverter, AsciiTableProvider, LinearConverter}
+import asciiConvertion.{AsciiTableProvider, LinearConverter}
+import commands._
 import core.{AsciiImage, Image}
-import filters.{Brightness, Filter, Flip, Greyscale, Invert}
+import filters._
 import imageGenerators.RandomImageGenerator
 import loader.ImageFileLoader
 import output.{AsciiFileOutputWriter, ConsoleAsciiOutputWriter}
@@ -15,7 +16,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
     cmds.foreach {
       case cmd: Command[_] => {
         cmd match {
-          case command: LoadFromFile =>
+          case command: LoadFromFileCmd =>
             var loader = new ImageFileLoader(command.arg.get)
             imgProduct = loader.load()
           case _ =>
@@ -59,6 +60,21 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
             }
       }
     }
+  }
+
+  private def loadData(): Option[Image]  = {
+    var imgProduct: Option[Image] = Option.empty
+    cmds.foreach {
+      case cmd: Command[_] => {
+        cmd match {
+          case command: LoadFromFileCmd =>
+            var loader = new ImageFileLoader(command.arg.get)
+            imgProduct = loader.load()
+          case _ =>
+        }
+      }
+    }
+    imgProduct
   }
 
   private def applyFilter(filter: Filter,imgProduct: Option[Image]): Option[Image] = {

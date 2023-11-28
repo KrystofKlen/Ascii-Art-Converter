@@ -1,6 +1,6 @@
 package parserTests
 
-import commands.{BrightnessCmd, FlipCmd, InvertCmd, LoadFromFile, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
+import commands.{BrightnessCmd, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
 import filters.FLIP_AXIS
 import org.scalatest.funsuite.AnyFunSuite
 import parser.ConsoleParser
@@ -26,7 +26,7 @@ class ConsoleParserTest extends AnyFunSuite{
         classOf[BrightnessCmd],
         classOf[RandomImgCmd],
         classOf[InvertCmd],
-        classOf[LoadFromFile])
+        classOf[LoadFromFileCmd])
 
       val actualClasses = commands1.map(_.getClass)
       assert(actualClasses.toSet.size == expectedClasses.size)
@@ -38,7 +38,7 @@ class ConsoleParserTest extends AnyFunSuite{
         case cmd: OutputConsoleCmd => true
         case cmd: OutputFileCmd => cmd.arg.get.equals("dst")
         case cmd: BrightnessCmd => cmd.arg.get == 90
-        case cmd: LoadFromFile => cmd.arg.get.equals("src")
+        case cmd: LoadFromFileCmd => cmd.arg.get.equals("src")
         case cmd: FlipCmd => cmd.arg.get == FLIP_AXIS.X
         case cmd: RandomImgCmd => true
         case cmd: InvertCmd => cmd.arg.isEmpty

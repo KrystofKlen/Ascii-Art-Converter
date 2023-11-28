@@ -1,6 +1,6 @@
 package commandsTests
 
-import commands.{BrightnessCmd, LoadFromFile, OutputFileCmd}
+import commands.{BrightnessCmd, LoadFromFileCmd, OutputFileCmd}
 import org.scalatest.funsuite.AnyFunSuite
 
 class CommandsTest extends AnyFunSuite{
@@ -16,9 +16,9 @@ class CommandsTest extends AnyFunSuite{
       new BrightnessCmd(-180),
       new BrightnessCmd(-270),
       new BrightnessCmd(-360),
-      new LoadFromFile("src/file"),
-      new LoadFromFile("src/A/B/C/file.jpg"),
-      new LoadFromFile("../../A/B/file.txt"),
+      new LoadFromFileCmd("src/file"),
+      new LoadFromFileCmd("src/A/B/C/file.jpg"),
+      new LoadFromFileCmd("../../A/B/file.txt"),
       new OutputFileCmd("src/good"),
       new OutputFileCmd("src/ok.txt"),
     )
@@ -30,7 +30,7 @@ class CommandsTest extends AnyFunSuite{
   test("Commands receiving wrong Arguments"){
     val cmdList = List(
       new BrightnessCmd(40),
-      new LoadFromFile("ey hey"),
+      new LoadFromFileCmd("ey hey"),
       new OutputFileCmd("/.."),
       new OutputFileCmd("a .. b"),
     )

@@ -10,8 +10,7 @@ import java.io.{BufferedWriter, FileWriter, IOException}
 class NonLinearConverterTest extends AnyFunSuite{
 
   test("ascii non-linear") {
-    val utils = new TestUtils
-    val img = utils.loadImg("src/test/assets/parrot.jpg")
+    val img = TestUtils.loadImg("src/test/assets/parrot.jpg")
     val converter: AsciiConverter = new NonLinearConverter(
       AsciiTableProvider.DEFAULT_TABLE
     )

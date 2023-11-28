@@ -1,6 +1,6 @@
 package parser
 
-import commands.{BrightnessCmd, Command, FlipCmd, InvertCmd, LoadFromFile, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
+import commands.{BrightnessCmd, Command, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
 import filters.FLIP_AXIS
 
 import java.util
@@ -14,7 +14,7 @@ class ConsoleParser (cmdArgs : List[String]) extends Parser {
     while (remainingArgs.nonEmpty) {
       remainingArgs match {
         case "--image" :: src :: tail =>
-          parsedCommands :+= new LoadFromFile(src)
+          parsedCommands :+= new LoadFromFileCmd(src)
           remainingArgs = tail
 
         case "--image" :: tail =>

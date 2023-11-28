@@ -9,17 +9,20 @@ import testUtils.TestUtils
 
 class BrightnessTest extends AnyFunSuite {
 
-  val utils = new TestUtils
+  test("Brightness -50 test.") {
+    testFilter(-50,TestUtils.PATH_TEST_RESULTS + TestUtils.BRIGHTNESS_MINUS_50_RESULT)
+  }
 
-  test("Brightness test.") {
-    val originalImage = utils.loadImg("src/test/assets/sunflower.jpg")
+  test("Brightness +50 test"){
+    testFilter(50,TestUtils.PATH_TEST_RESULTS + TestUtils.BRIGHTNESS_PLUS_50_RESULT)
+  }
+
+  private def testFilter(deg: Int, dst: String): Unit = {
+    val originalImage = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
 
     // Apply Greyscale Saturation
-    val filter = new Brightness(-80)
+    val filter = new Brightness(deg)
     val filtered = filter.apply(originalImage);
-    val writer = ImageIO.getImageWritersByFormatName("jpg").next()
-    val output = new File("src/test/assets/sunflower_grey.jpg")
-    writer.setOutput(ImageIO.createImageOutputStream(output))
-    writer.write(filtered.getBufferedImage)
+    TestUtils.saveToFile(filtered, dst)
   }
 }

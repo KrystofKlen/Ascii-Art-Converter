@@ -1,4 +1,5 @@
-import commands.{BrightnessCmd, Executor, FlipCmd, InvertCmd, LinearExecutor, LoadFromFile, OutputConsoleCmd, OutputFileCmd}
+import commands.{BrightnessCmd, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd}
+import executors.{Executor, LinearExecutor}
 import filters.FLIP_AXIS
 import parser.{ConsoleParser, Parser}
 
