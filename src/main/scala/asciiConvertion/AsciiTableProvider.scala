@@ -15,12 +15,14 @@ case object AsciiTableProvider{
 
   val SPARCE_TABLE = AsciiTable(Array('@', 'O', 'C', 'X', 'y', 'l', 'i', '!', ';', ',', '^', '`'))
 
+  val NON_LINEAR_TABLE = AsciiTable(Array('#','#','#','#','X','X','(','(',':',':',':',':',':',':',':',':',':',':',':','.','.','.',' ', ' ', ' '))
   def customTable(chars : Array[Char]) = AsciiTable(chars)
 
   def getTable(name: String): AsciiTable = {
     name match {
       case "DENSE_TABLE" => DENSE_TABLE
       case "SPARCE_TABLE" => SPARCE_TABLE
+      case "NON_LINEAR_TABLE" => NON_LINEAR_TABLE
       case _ =>  DEFAULT_TABLE
     }
   }

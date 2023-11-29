@@ -66,7 +66,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
           case command: PickAsciiTableCmd =>
             asciiTable = command.arg.get
 
-          case _ => asciiTable = AsciiTableProvider.DEFAULT_TABLE
+          case _ =>
         }
     asciiTable
   }
