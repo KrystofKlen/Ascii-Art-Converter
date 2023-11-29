@@ -16,9 +16,9 @@ class CommandsTest extends AnyFunSuite{
       new BrightnessCmd(-180),
       new BrightnessCmd(-270),
       new BrightnessCmd(-360),
-      new LoadFromFileCmd("src/file"),
+      new LoadFromFileCmd("src/file.png"),
       new LoadFromFileCmd("src/A/B/C/file.jpg"),
-      new LoadFromFileCmd("../../A/B/file.txt"),
+      new LoadFromFileCmd("../../A/B/file.png"),
       new OutputFileCmd("src/good"),
       new OutputFileCmd("src/ok.txt"),
     )
