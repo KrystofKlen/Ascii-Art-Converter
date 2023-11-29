@@ -7,6 +7,7 @@ import javax.imageio.ImageIO
 
 object TestUtils {
   val PATH_TEST_RESULTS = "src/test/results/"
+  val ABS_PATH = "/home/krystof/Documents/CVUT/OOP/AsciiArt/"
   val BRIGHTNESS_MINUS_50_RESULT = "brightness_minus50.jpg"
   val BRIGHTNESS_PLUS_50_RESULT = "brightness_plus50.jpg"
   val GREYSCALE_RESULT = "greyscale.jpg"
@@ -17,6 +18,7 @@ object TestUtils {
   val RANDOM_RESULT = "random.jpg"
   val OUTPUT_FILE_RESULT = "output_file.jpg"
   val OUTPUT_FILE_ASCII_RESULT = "output_file_ascii.txt"
+  val ABS_OUTPUT_FILE_ASCII_RESULT = "abs_output_file_ascii.txt"
   val TEST_IMG_SRC = "src/test/assets/parrot.jpg"
 
   def saveToFile(filtered: Image, path: String): Unit = {

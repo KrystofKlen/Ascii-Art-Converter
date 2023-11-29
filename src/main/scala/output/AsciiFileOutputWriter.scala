@@ -2,12 +2,12 @@ package output
 
 import core.AsciiImage
 
-import java.io.{BufferedWriter, FileWriter, IOException}
+import java.io.{BufferedWriter, File, FileWriter, IOException}
 
 class AsciiFileOutputWriter(filePath: String) extends OutputWriter [AsciiImage]{
   override def output(data: AsciiImage): Boolean = {
     try {
-      val writer = new BufferedWriter(new FileWriter(filePath))
+      val writer = new BufferedWriter(new FileWriter(new File(filePath)))
       for (y <- 0 until data.getHeight) {
         for (x <- 0 until data.getWidth) {
           writer.write(data.getCharAt(x,y).get)

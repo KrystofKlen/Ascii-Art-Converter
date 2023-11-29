@@ -25,4 +25,14 @@ class OutputFileTest extends AnyFunSuite{
     assert(success)
   }
 
+  test("should create file with ascii art - absolute path"){
+    val result = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
+    val output: OutputWriter[AsciiImage] = new AsciiFileOutputWriter(TestUtils.ABS_PATH +
+      TestUtils.PATH_TEST_RESULTS + TestUtils.ABS_OUTPUT_FILE_ASCII_RESULT);
+    val converter: AsciiConverter = new LinearConverter(AsciiTableProvider.DEFAULT_TABLE)
+    val asciiArt = converter.convert(result)
+    val success = output.output(asciiArt)
+    assert(success)
+  }
+
 }
