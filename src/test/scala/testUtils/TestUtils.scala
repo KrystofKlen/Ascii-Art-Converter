@@ -20,6 +20,7 @@ object TestUtils {
   val OUTPUT_FILE_ASCII_RESULT = "output_file_ascii.txt"
   val ABS_OUTPUT_FILE_ASCII_RESULT = "abs_output_file_ascii.txt"
   val TEST_IMG_SRC = "src/test/assets/parrot.jpg"
+  val LINEAR_EXECUTOR_RESULT = "src/test/results/lin_exec_result.txt"
 
   def saveToFile(filtered: Image, path: String): Unit = {
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()

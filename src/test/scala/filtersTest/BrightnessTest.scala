@@ -2,7 +2,9 @@ package filtersTest
 
 import core.Image
 import filters.Brightness
+import org.scalactic.Explicitly.after
 import org.scalatest.funsuite.AnyFunSuite
+
 import java.io.File
 import javax.imageio.ImageIO
 import testUtils.TestUtils

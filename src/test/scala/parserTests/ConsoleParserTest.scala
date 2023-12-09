@@ -1,6 +1,8 @@
 package parserTests
 
-import commands.{BrightnessCmd, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, RandomImgCmd}
+import asciiConvertion.AsciiTableProvider
+import commands.{BrightnessCmd, Command, CustomTableCmd, FlipCmd, InvertCmd, LoadFromFileCmd, OutputConsoleCmd, OutputFileCmd, PickAsciiTableCmd, RandomImgCmd}
+import core.AsciiTable
 import filters.FLIP_AXIS
 import org.scalatest.funsuite.AnyFunSuite
 import parser.ConsoleParser
@@ -54,11 +56,84 @@ class ConsoleParserTest extends AnyFunSuite{
       }
     }
 
-    test("Should throw exception - invalid value for brightness"){
-      val parserIncorrectInput2 = new ConsoleParser(List("--brightness", "klkl"))
+    test("Should throw exception - invalid arg values"){
+      var parserIncorrectInput2 = new ConsoleParser(List("--brightness", "klkl"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--image", "fbsbvh    085 e8 "))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--image"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--brightness"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--flip","x y"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--flip"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--flip", "xy"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--output-file"))
+      intercept[IllegalArgumentException] {
+        parserIncorrectInput2.parse()
+      }
+
+      parserIncorrectInput2 = new ConsoleParser(List("--output-file","invalid_file.jpg"))
       intercept[IllegalArgumentException] {
         parserIncorrectInput2.parse()
       }
     }
 
-}
+   private def parseCommand(args: List[String]): Command[_] = {
+      val parser = new ConsoleParser(args)
+      val commands = parser.parse()
+
+      val result = commands.headOption.getOrElse(fail("No command found in parsed commands"))
+      result
+    }
+
+    private def assertTableContent(actual: AsciiTable, expectedChars: Array[Char]): Unit = {
+      assert(
+        actual.chars.sameElements(expectedChars),
+        s"Expected: ${expectedChars.mkString("Array(", ", ", ")")}, Actual: ${actual.chars.mkString("Array(", ", ", ")")}"
+      )
+    }
+
+    test("should return default table for unknown table name") {
+      val result = parseCommand(List("--table", "some table"))
+      val defaultTable = AsciiTableProvider.DEFAULT_TABLE
+      assertTableContent(result.asInstanceOf[PickAsciiTableCmd].arg.getOrElse(fail("Ascii table not found")), defaultTable.chars)
+    }
+
+    test("should return DENSE_TABLE table for --table DENSE_TABLE") {
+      val result = parseCommand(List("--table", "DENSE_TABLE"))
+      val denseTable = AsciiTableProvider.DENSE_TABLE
+      assertTableContent(result.asInstanceOf[PickAsciiTableCmd].arg.getOrElse(fail("Ascii table not found")), denseTable.chars)
+    }
+
+    test("custom table test") {
+      val customTable = "abcdefg"
+      val result = parseCommand(List("--custom-table", customTable))
+      assertTableContent(result.asInstanceOf[CustomTableCmd].arg.getOrElse(fail("Ascii table not found")), customTable.toCharArray)
+    }
+  }
+

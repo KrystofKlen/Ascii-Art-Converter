@@ -7,6 +7,6 @@ class OutputFileCmd(dst: String) extends Command [String]{
   override def checkArgs(): Boolean = {
     if (arg.isEmpty) return false
     val pathRegex = "^(.+)\\/([^\\/]+)$".r
-    pathRegex.matches(arg.get)
+    pathRegex.matches(arg.get) && !dst.endsWith(".jpg") && !dst.endsWith(".png")
   }
 }

@@ -2,7 +2,7 @@ package output
 
 import core.Image
 
-import java.io.File
+import java.io.{File, IOException}
 import javax.imageio.ImageIO
 
 class ImageFileOutputWriter(filePath: String, imageFormat: String) extends OutputWriter[Image] {
@@ -16,7 +16,7 @@ class ImageFileOutputWriter(filePath: String, imageFormat: String) extends Outpu
       writer.dispose()
       true
     } catch {
-      case _: Exception => false
+      case e: IOException => false
     }
   }
 }
