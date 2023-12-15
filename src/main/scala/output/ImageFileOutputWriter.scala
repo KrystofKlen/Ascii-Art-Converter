@@ -16,7 +16,7 @@ class ImageFileOutputWriter(filePath: String, imageFormat: String) extends Outpu
       writer.dispose()
       true
     } catch {
-      case e: IOException => false
+      case e: IOException => throw new IOException("Could not create the result file, check filePath.")
     }
   }
 }

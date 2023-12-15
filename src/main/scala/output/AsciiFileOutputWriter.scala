@@ -17,7 +17,8 @@ class AsciiFileOutputWriter(filePath: String) extends OutputWriter [AsciiImage]{
       writer.close()
       true
     } catch {
-      case e: IOException => false
+      // false can be returned if needed -> Exception then has to be handled elsewhere.
+      case e: IOException => throw new IOException("Could not create the result file, check filePath.")
     }
   }
 }
