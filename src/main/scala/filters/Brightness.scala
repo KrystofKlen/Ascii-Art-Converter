@@ -4,6 +4,10 @@ import core.{Image, Pixel}
 import java.awt.Color
 import java.awt.image.BufferedImage
 
+/**
+ *
+ * @param brightness range = (-100, +100) - for less bright, + for more bright, 0 for no change
+ */
 class Brightness(val brightness: Int) extends Filter {
 
   override def apply(originalImage: Image): Image = {

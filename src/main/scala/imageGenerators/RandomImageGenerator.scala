@@ -5,6 +5,10 @@ import java.awt.{Color, Graphics2D}
 import java.awt.image.BufferedImage
 import java.util.Random
 
+/**
+ * Simple generator, creates image with random width (300 - 800px) and height (300-800px)
+ * and fills with random color pixels.
+ */
 class RandomImageGenerator extends ImageGenerator {
 
   override def generateImage(): Image = {

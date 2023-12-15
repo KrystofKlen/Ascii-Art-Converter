@@ -4,6 +4,7 @@ import loader.ImageFileLoader
 import org.scalatest.funsuite.AnyFunSuite
 import testUtils.TestUtils
 
+import java.io.IOException
 import scala.Console.in
 
 class ImageFileLoaderTest  extends AnyFunSuite {
@@ -22,8 +23,14 @@ class ImageFileLoaderTest  extends AnyFunSuite {
 
   test("Loading Non-Existing Image from file") {
     val loader = new ImageFileLoader("nothing")
-    val result = loader.load()
-    assert(result.isEmpty)
+    try{
+      val result = loader.load()
+      fail()
+    } catch {
+      case io: IOException =>
+      case _ : Exception => fail("Threw unexpected exception.")
+
+    }
   }
 
 

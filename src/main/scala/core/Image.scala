@@ -3,6 +3,10 @@ package core
 import java.awt.{Color, Graphics2D, Image}
 import java.awt.image.BufferedImage
 
+/**
+ * Class representing Image in the program. Simple implementation: dimensions, pixels
+ * @param pixels 2d array of pixels that the Image consists of
+ */
 class Image(private val pixels: Array[Array[Pixel]]){
   private val width: Int = pixels.length
   private val height: Int = if (width > 0) pixels(0).length else 0
@@ -67,6 +71,12 @@ class Image(private val pixels: Array[Array[Pixel]]){
 }
 
 object Image{
+
+  /**
+   * @param image
+   * @return Image class with data from BufferedImage, some data from BufferedImage might be lost,
+   *         but those are not important for the usage.
+   */
   def bufferedImageToPixels(image: BufferedImage): Array[Array[Pixel]] = {
     val width = image.getWidth
     val height = image.getHeight

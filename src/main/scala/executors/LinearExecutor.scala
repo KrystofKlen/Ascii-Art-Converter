@@ -8,6 +8,12 @@ import imageGenerators.RandomImageGenerator
 import loader.ImageFileLoader
 import output.{AsciiFileOutputWriter, ConsoleAsciiOutputWriter}
 
+import java.io.IOException
+
+/**
+ * Executes given commands in strict, linear, predefined order.
+ * @param cmds commands to execute
+ */
 class LinearExecutor(cmds:List[Command[_]]) extends Executor {
   override def executeCommands(): Unit = {
     var imgProduct: Option[Image] = Option.empty
@@ -17,6 +23,10 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
     output(imgProduct,asciiTable)
   }
 
+  /**
+   * Iterates commands and executed those which read the image from source.
+   * @return Image or Option.empty if Image command was not found. Throws IO
+   */
   private def loadData(): Option[Image] = {
     var imgProduct: Option[Image] = Option.empty
     cmds.foreach {
@@ -25,7 +35,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
           case command: LoadFromFileCmd =>
             var loader = new ImageFileLoader(command.arg.get)
             imgProduct = loader.load()
-          case _ =>
+          case _ => // continue iteration
         }
       }
     }
@@ -50,13 +60,14 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
             val imageGenerator = new RandomImageGenerator
             imgProduct = Option(imageGenerator.generateImage())
 
-          case _ =>
+          case _ => // continue iteration
         }
       }
     }
     imgProduct
   }
 
+  // If no requirement for AsciiTable then the DEFAULT_TABLE is used.
   private def setAsciiTable(): AsciiTable = {
     var asciiTable: AsciiTable = AsciiTableProvider.DEFAULT_TABLE
         cmds.foreach {
@@ -66,11 +77,11 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
           case command: PickAsciiTableCmd =>
             asciiTable = command.arg.get
 
-          case _ =>
+          case _ => // continue iteration
         }
     asciiTable
   }
-
+  
   private def output(product: Option[Image], asciiTable: AsciiTable): Unit = {
     var imgProduct = product
     cmds.foreach {
@@ -84,7 +95,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
             imgProduct = applyFilter(new Greyscale, imgProduct)
             val outputCmd = new ConsoleAsciiOutputWriter
             outputCmd.output(getAsciiArt(imgProduct, asciiTable))
-          case _ =>
+          case _ => // continue iteration
         }
       }
     }

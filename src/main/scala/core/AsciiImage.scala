@@ -1,5 +1,9 @@
 package core
 
+/**
+ *
+ * @param chars ascii image represented as 2d char array
+ */
 class AsciiImage(private val chars: Array[Array[Char]]) {
   private val width = chars.size
   private val height = if (chars.size > 0) chars(0).length else 0
@@ -27,6 +31,10 @@ class AsciiImage(private val chars: Array[Array[Char]]) {
     }
   }
 
+  /**
+   * @param ascii
+   * @return true if image in param has the same chars at the same positions.
+   */
   private def charsAreSame(ascii:AsciiImage): Boolean = {
     val width = ascii.width
     val height = ascii.height

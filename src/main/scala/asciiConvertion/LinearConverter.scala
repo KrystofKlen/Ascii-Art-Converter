@@ -1,6 +1,12 @@
 package asciiConvertion
 import core.{AsciiImage, AsciiTable, Image}
 
+/**
+ * The range of 255 greyscale values is equally divied between a set of ASCII characters
+ * @param asciiTable = AsciiTable to be used for conversion. Start with dense chars.
+ *                     E.g. #,&,*,!,.
+ *
+ */
 class LinearConverter(val asciiTable:AsciiTable) extends AsciiConverter {
 
   override def convert(image: Image): AsciiImage = {
