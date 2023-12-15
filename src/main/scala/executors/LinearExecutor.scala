@@ -15,6 +15,11 @@ import java.io.IOException
  * @param cmds commands to execute
  */
 class LinearExecutor(cmds:List[Command[_]]) extends Executor {
+
+  /**
+   * Commands are executed in topological equivalent groups ->
+   * Load - Apply filters - Set ascii table - Output
+   */
   override def executeCommands(): Unit = {
     var imgProduct: Option[Image] = Option.empty
     imgProduct = loadData();
@@ -35,6 +40,11 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
           case command: LoadFromFileCmd =>
             var loader = new ImageFileLoader(command.arg.get)
             imgProduct = loader.load()
+
+          case command: RandomImgCmd =>
+            val imageGenerator = new RandomImageGenerator
+            imgProduct = Option(imageGenerator.generateImage())
+
           case _ => // continue iteration
         }
       }
@@ -55,10 +65,6 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
 
           case command: InvertCmd =>
             imgProduct = applyFilter(new Invert(), imgProduct)
-
-          case command: RandomImgCmd =>
-            val imageGenerator = new RandomImageGenerator
-            imgProduct = Option(imageGenerator.generateImage())
 
           case _ => // continue iteration
         }
@@ -81,7 +87,7 @@ class LinearExecutor(cmds:List[Command[_]]) extends Executor {
         }
     asciiTable
   }
-  
+
   private def output(product: Option[Image], asciiTable: AsciiTable): Unit = {
     var imgProduct = product
     cmds.foreach {

@@ -41,40 +41,6 @@ class LinearExecutorTest extends AnyFunSuite{
     assert(filesEq,"Linear executor failed when given different order of same commands.")
   }
 
-  test("Linear executor ended execution when given --random-image"){
-
-    val tmpFileForComparison1 = TestUtils.PATH_TEST_RESULTS + "1.txt"
-
-    val commands: List[Command[_]] = List(
-      new BrightnessCmd(90),
-      new FlipCmd(FLIP_AXIS.X),
-      new LoadFromFileCmd(TestUtils.TEST_IMG_SRC),
-      new OutputFileCmd(tmpFileForComparison1),
-      new RandomImgCmd()
-    )
-    val executor: Executor = new LinearExecutor(commands)
-    executor.executeCommands()
-    assert( doesFileExist(TestUtils.LINEAR_EXECUTOR_RESULT), "Linear executor has not created an expected result file for random img")
-
-    val tmpFileForComparison2 = TestUtils.PATH_TEST_RESULTS + "2.txt"
-
-    val commands2: List[Command[_]] = List(
-      new FlipCmd(FLIP_AXIS.X),
-      new OutputFileCmd(tmpFileForComparison2),
-      new BrightnessCmd(90),
-      new LoadFromFileCmd(TestUtils.TEST_IMG_SRC),
-    )
-    val executor2 : Executor = new LinearExecutor(commands2)
-    executor2.executeCommands()
-
-    val filesEq = areFileContentsEqual(tmpFileForComparison1, tmpFileForComparison2)
-    //clean up
-    removeFile(tmpFileForComparison1)
-    removeFile(tmpFileForComparison2)
-
-    assert(! filesEq,"Linear executor failed for random image -> command was ignored/execution did not stop")
-  }
-
   private def doesFileExist(filePath: String): Boolean = {
     Files.exists(Paths.get(filePath))
   }

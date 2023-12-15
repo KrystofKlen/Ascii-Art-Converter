@@ -9,12 +9,17 @@ import java.util
 class ConsoleParser (cmdArgs : List[String]) extends Parser {
 
   override def parse(): List[Command[_]] = {
+    var imageCmdsCnt = 0;
     var parsedCommands: List[Command[_]] = List.empty
 
     var remainingArgs = cmdArgs
     while (remainingArgs.nonEmpty) {
       remainingArgs match {
         case "--image" :: src :: tail =>
+          if(imageCmdsCnt >= 1) {
+            throw new IllegalArgumentException("There can be only 1 --image command.")
+          }
+          imageCmdsCnt += 1
           parsedCommands :+= new LoadFromFileCmd(src)
           remainingArgs = tail
 

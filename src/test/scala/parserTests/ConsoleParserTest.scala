@@ -135,5 +135,28 @@ class ConsoleParserTest extends AnyFunSuite{
       val result = parseCommand(List("--custom-table", customTable))
       assertTableContent(result.asInstanceOf[CustomTableCmd].arg.getOrElse(fail("Ascii table not found")), customTable.toCharArray)
     }
+
+    test("Should throw IllegalArgumentException with 2 --image commands"){
+      val parser = new ConsoleParser(List("--image","src/file.jpg","--image","src/file.jpg"))
+      try{
+        parser.parse()
+        fail()
+      }catch {
+        case illArg : IllegalArgumentException =>
+        case ex => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
+
+      }
+    }
+
+    test("Should not throw IllegalArgumentException with 1 --image commands"){
+      val parser = new ConsoleParser(List("--image","src/file.jpg"))
+      try{
+        parser.parse()
+      }catch {
+        case illArg : IllegalArgumentException => fail()
+        case ex => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
+
+      }
+    }
   }
 

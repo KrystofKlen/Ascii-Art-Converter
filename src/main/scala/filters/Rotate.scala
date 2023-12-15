@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage
 import java.awt.geom.AffineTransform
 import java.awt.image.{AffineTransformOp, BufferedImage}
 
+//TODO
 class Rotate(angle: Int) extends Filter {
   override def apply(originalImage: Image): Image = {
     val width = originalImage.getWidth
