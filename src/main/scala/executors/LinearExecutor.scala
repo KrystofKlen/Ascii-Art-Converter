@@ -14,7 +14,7 @@ import java.io.IOException
  * Executes given commands in strict, linear, predefined order.
  * @param cmds commands to execute
  */
-class LinearExecutor(cmds:List[Command[_]]) extends Executor {
+class LinearExecutor(cmds:Seq[Command[_]]) extends Executor {
 
   /**
    * Commands are executed in topological equivalent groups ->

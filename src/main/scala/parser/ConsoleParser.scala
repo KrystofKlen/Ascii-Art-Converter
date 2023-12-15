@@ -6,11 +6,11 @@ import filters.FLIP_AXIS
 
 import java.util
 
-class ConsoleParser (cmdArgs : List[String]) extends Parser {
+class ConsoleParser (cmdArgs : Seq[String]) extends Parser {
 
-  override def parse(): List[Command[_]] = {
+  override def parse(): Seq[Command[_]] = {
     var imageCmdsCnt = 0;
-    var parsedCommands: List[Command[_]] = List.empty
+    var parsedCommands: Seq[Command[_]] = Seq.empty
 
     var remainingArgs = cmdArgs
     while (remainingArgs.nonEmpty) {
