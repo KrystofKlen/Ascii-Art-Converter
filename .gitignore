@@ -2,3 +2,4 @@ target/
 .idea/
 .idea/*
 src/test/results/*
+project/target/*

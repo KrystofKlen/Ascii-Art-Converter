@@ -14,6 +14,8 @@ The ASCII Art Converter is a simple yet powerful tool that allows you to transfo
 - [Usage](#usage)
   - [Basic Command](#basic-command)
   - [Filter Commands](#filter-commands)
+  - [Output Commands](#output-commands)
+  - [Ascii Table selection](#ascii-table-selection)
   - [Example Commands](#example-commands)
 
 ## Getting Started
@@ -42,7 +44,7 @@ sbt
 run --image "<path_to_image>"
 ```
 
-### Filters Command
+### Filters Commands
 ```bash
  --brightness < (-100,100) for best results>
 
@@ -50,6 +52,25 @@ run --image "<path_to_image>"
 
  --invert 
 ```
+### Ascii Table Selection
+table_name:
+- DEFAULT_TABLE
+- DENSE_TABLE
+- SPARCE_TABLE
+```bash
+--table <table_name>
+
+--custom-table "<chars>"
+```
+
+
+### Output Commands
+```bash
+--output-file "path"
+
+--output-console
+```
+
 ### Example Commands
 ```bash
 # Convert image with brightness adjustment
@@ -70,6 +91,12 @@ run --image "images/example.png" --output-file "output.txt"
 # Chain filters
 run --image "images/example.png" --flip x  
 --brightness -30 --output-file "output.txt" --output-console
+
+## Select pre-defined table
+run --image "src/test/assets/bmw.jpg"  --table DENSE_TABLE --output-console
+
+## Define custom table for ascii conversion
+run --image "src/test/assets/bmw.jpg"  --custom-table "#&1}(*<:." --output-console
 ```
 
 
