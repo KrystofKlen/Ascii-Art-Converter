@@ -31,10 +31,15 @@ The ASCII Art Converter is a simple yet powerful tool that allows you to transfo
 
 Inside the project directory, use the following commands:
 
+## Start
+```bash
+sbt
+```
+
 ### Basic Command
 
 ```bash
-sbt run --image "<path_to_image>"
+run --image "<path_to_image>"
 ```
 
 ### Filters Command
@@ -48,22 +53,22 @@ sbt run --image "<path_to_image>"
 ### Example Commands
 ```bash
 # Convert image with brightness adjustment
-sbt run --image images/example.jpg --brightness +20 --output-file "output.txt"
+run --image "images/example.jpg" --brightness +20 --output-file "output.txt"
 
 # Convert image with horizontal flip
-sbt run --image images/example.png --flip x --output-file "output.txt"
+run --image "images/example.png" --flip x --output-file "output.txt"
 
 # Convert image with vertical flip
-sbt run --image images/example.gif --flip y --output-file "output.txt"
+run --image "images/example.jpg" --flip y --output-file "output.txt"
 
 # Convert image with grayscale inversion with output to console
-sbt run --image images/example.jpg --invert --output-console
+run --image "images/example.jpg" --invert --output-console
 
 # Save ASCII art to a file
-sbt run --image images/example.png --output-file "output.txt"
+run --image "images/example.png" --output-file "output.txt"
 
 # Chain filters
-sbt run --image images/example.png --flip x  
+run --image "images/example.png" --flip x  
 --brightness -30 --output-file "output.txt" --output-console
 ```
 
