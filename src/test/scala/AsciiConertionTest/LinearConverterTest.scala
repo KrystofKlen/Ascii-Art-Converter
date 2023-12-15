@@ -10,14 +10,14 @@ import java.io.{BufferedWriter, FileWriter, IOException}
 class LinearConverterTest extends AnyFunSuite{
 
   test("ascii linear"){
-    val img = TestUtils.loadImg("src/test/assets/parrot.jpg")
+    val img = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
     val converter: AsciiConverter =
       new LinearConverter(
       AsciiTableProvider.DEFAULT_TABLE
       )
     val result = converter.convert(img)
     try {
-      val writer = new BufferedWriter(new FileWriter("src/test/assets/test_ascii"))
+      val writer = new BufferedWriter(new FileWriter(TestUtils.PATH_TEST_RESULTS + TestUtils.TEST_ASCII_RESULT))
       for (y <- 0 until result.getHeight) {
         for (x <- 0 until result.getWidth) {
           writer.write(result.getCharAt(x,y).get)
