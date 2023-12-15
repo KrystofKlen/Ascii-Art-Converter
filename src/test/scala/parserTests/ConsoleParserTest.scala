@@ -143,7 +143,7 @@ class ConsoleParserTest extends AnyFunSuite{
         fail()
       }catch {
         case illArg : IllegalArgumentException =>
-        case ex => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
+        case ex : Throwable => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
 
       }
     }
@@ -154,7 +154,7 @@ class ConsoleParserTest extends AnyFunSuite{
         parser.parse()
       }catch {
         case illArg : IllegalArgumentException => fail()
-        case ex => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
+        case ex : Throwable => fail("Unexpected exception thrown. Expected IllegalArgumentException. Got " + ex.toString)
 
       }
     }

@@ -44,7 +44,7 @@ run --image "<path_to_image>"
 
 ### Filters Command
 ```bash
- --brightness <(-100,100)>
+ --brightness < (-100,100) for best results>
 
  --flip <(x or y)>
 
