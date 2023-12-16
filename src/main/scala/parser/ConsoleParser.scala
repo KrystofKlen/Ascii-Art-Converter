@@ -73,6 +73,9 @@ class ConsoleParser (cmdArgs : Seq[String]) extends Parser {
           remainingArgs = tail
 
         case "--custom-table" :: table :: tail =>
+          if(table.size < 1){
+            throw new IllegalArgumentException("Size of custom table < 1")
+          }
           parsedCommands :+= new CustomTableCmd(AsciiTableProvider.customTable(table.toCharArray))
           remainingArgs = tail
 

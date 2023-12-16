@@ -158,5 +158,15 @@ class ConsoleParserTest extends AnyFunSuite{
 
       }
     }
+
+    test("Should throw IllegalArgumentException on custom table with 0 length"){
+      val parser = new ConsoleParser(List("--custom-table","","--image","src/file.jpg"))
+      try{
+        parser.parse()
+        fail()
+      }catch {
+        case illArg: IllegalArgumentException => // OK
+      }
+    }
   }
 
