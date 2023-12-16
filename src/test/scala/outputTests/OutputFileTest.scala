@@ -26,6 +26,7 @@ class OutputFileTest extends AnyFunSuite{
   }
 
   test("should create file with ascii art - absolute path"){
+    assume(!TestUtils.isInCI, "Absolute path test not run in CI")
     val result = TestUtils.loadImg(TestUtils.TEST_IMG_SRC)
     val output: OutputWriter[AsciiImage] = new AsciiFileOutputWriter(TestUtils.ABS_PATH +
       TestUtils.PATH_TEST_RESULTS + TestUtils.ABS_OUTPUT_FILE_ASCII_RESULT);

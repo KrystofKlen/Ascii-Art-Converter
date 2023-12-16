@@ -16,6 +16,7 @@ class ImageFileLoaderTest  extends AnyFunSuite {
   }
 
   test("Loading Image from file - absolute path") {
+    assume(!TestUtils.isInCI, "Absolute path test not run in CI")
     val loader = new ImageFileLoader(TestUtils.ABS_PATH + TestUtils.TEST_IMG_SRC)
     val result = loader.load()
     assert(result.isDefined)

@@ -22,6 +22,7 @@ object TestUtils {
   val TEST_IMG_SRC = "src/test/assets/parrot.jpg"
   val LINEAR_EXECUTOR_RESULT = "src/test/results/lin_exec_result.txt"
   val TEST_ASCII_RESULT = "test_ascii_result.txt"
+  val GITLAB_CI_ENV = "CI"
 
   def saveToFile(filtered: Image, path: String): Unit = {
     val writer = ImageIO.getImageWritersByFormatName("jpg").next()
@@ -35,6 +36,11 @@ object TestUtils {
     // Load the image using ImageIO
     new Image(Image.bufferedImageToPixels(
       ImageIO.read(new java.io.File(imagePath))))
+  }
+
+  def isInCI: Boolean = {
+    val isInCI = sys.env.contains(GITLAB_CI_ENV)
+    isInCI
   }
 
 }
